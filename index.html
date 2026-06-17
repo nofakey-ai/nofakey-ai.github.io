@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nofakey.ai — AI Fake News & Scam Checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1A56DB;
+      --blue-dark: #1040AA;
+      --blue-light: #E8F0FE;
+      --red: #E02424;
+      --red-light: #FDE8E8;
+      --green: #057A55;
+      --green-light: #DEF7EC;
+      --amber: #B45309;
+      --amber-light: #FEF3C7;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-400: #9CA3AF;
+      --gray-600: #4B5563;
+      --gray-800: #1F2937;
+      --gray-900: #111827;
+      --white: #ffffff;
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-900);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 62px;
+    }
+    .logo { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+    .logo-icon { width: 34px; height: 34px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .logo-icon i { color: #fff; font-size: 18px; }
+    .logo-text { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: var(--gray-900); }
+    .logo-text span { color: var(--blue); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--gray-600); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--blue); }
+    .nav-cta { background: var(--blue); color: #fff; border: none; padding: 8px 18px; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--blue-dark); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #1A56DB 100%);
+      color: #fff;
+      text-align: center;
+      padding: 5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(99,102,241,0.25) 0%, transparent 60%);
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 5px 14px; border-radius: 999px;
+      font-size: 13px; font-weight: 500; margin-bottom: 1.5rem;
+    }
+    .hero-badge i { color: #34D399; font-size: 14px; }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 1.25rem; position: relative;
+    }
+    .hero h1 .highlight { color: #60A5FA; }
+    .hero p { font-size: 1.1rem; color: rgba(255,255,255,0.78); max-width: 520px; margin: 0 auto 2.5rem; }
+
+    /* ── CHECKER CARD ── */
+    .checker-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 680px;
+      margin: 0 auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+      position: relative; z-index: 1;
+    }
+    .checker-tabs { display: flex; gap: 8px; margin-bottom: 1.25rem; }
+    .tab-btn {
+      flex: 1; padding: 8px; border: 1.5px solid var(--gray-200);
+      background: var(--gray-50); border-radius: var(--radius-sm);
+      font-size: 13px; font-weight: 500; color: var(--gray-600);
+      cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 5px;
+    }
+    .tab-btn.active { background: var(--blue-light); border-color: var(--blue); color: var(--blue); }
+    .tab-btn i { font-size: 15px; }
+    textarea#newsInput {
+      width: 100%; min-height: 120px;
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm);
+      padding: 12px 14px; font-size: 15px; font-family: 'Inter', sans-serif;
+      color: var(--gray-900); background: var(--gray-50);
+      resize: vertical; transition: border-color 0.2s; line-height: 1.6;
+    }
+    textarea#newsInput:focus { outline: none; border-color: var(--blue); background: #fff; }
+    textarea#newsInput::placeholder { color: var(--gray-400); }
+    .checker-actions { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; gap: 12px; }
+    .char-count { font-size: 12px; color: var(--gray-400); }
+    .check-btn {
+      background: var(--blue); color: #fff;
+      border: none; padding: 11px 28px;
+      border-radius: var(--radius-sm); font-size: 15px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; gap: 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .check-btn:hover { background: var(--blue-dark); }
+    .check-btn:active { transform: scale(0.98); }
+    .check-btn i { font-size: 17px; }
+
+    /* ── RESULT BOX ── */
+    #result {
+      display: none; margin-top: 1.25rem;
+      border-radius: var(--radius-sm); padding: 1.25rem 1.5rem;
+      border: 1.5px solid; animation: slideIn 0.3s ease;
+    }
+    @keyframes slideIn { from { opacity:0; transform: translateY(-8px); } to { opacity:1; transform: translateY(0); } }
+    .result-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .result-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .result-icon i { font-size: 20px; }
+    .result-verdict { font-size: 18px; font-weight: 700; }
+    .result-score {
+      margin-left: auto; font-size: 13px; font-weight: 600;
+      padding: 4px 12px; border-radius: 999px;
+    }
+    #resultText { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .result-tips { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .tip-tag {
+      font-size: 12px; padding: 3px 10px;
+      border-radius: 999px; background: var(--gray-100);
+      color: var(--gray-600); display: flex; align-items: center; gap: 4px;
+    }
+    .tip-tag i { font-size: 12px; }
+
+    /* ── TRUST BAR ── */
+    .trust-bar-wrap { margin-top: 10px; }
+    .trust-bar-label { font-size: 12px; color: var(--gray-400); margin-bottom: 4px; }
+    .trust-bar-bg { background: var(--gray-200); border-radius: 999px; height: 6px; }
+    .trust-bar-fill { height: 6px; border-radius: 999px; transition: width 0.6s ease; }
+
+    /* ── STATS ── */
+    .stats-strip {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 1.25rem 2rem;
+      display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: var(--blue); }
+    .stat-label { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+    /* ── SECTIONS ── */
+    section { padding: 4rem 1.5rem; }
+    .section-inner { max-width: 860px; margin: 0 auto; }
+    .section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.5rem; }
+    .section-title { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 800; color: var(--gray-900); margin-bottom: 0.75rem; }
+    .section-sub { font-size: 1rem; color: var(--gray-600); max-width: 520px; line-height: 1.7; }
+
+    /* ── HOW IT WORKS ── */
+    #how { background: var(--white); }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .step { text-align: center; padding: 1.5rem 1rem; }
+    .step-num {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--blue-light); color: var(--blue);
+      font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;
+    }
+    .step h3 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 6px; }
+    .step p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ── FEATURES ── */
+    #features { background: var(--gray-50); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+    .feat-card {
+      background: var(--white); border: 1px solid var(--gray-200);
+      border-radius: var(--radius); padding: 1.5rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feat-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+    .feat-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .feat-icon i { font-size: 20px; color: var(--blue); }
+    .feat-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; color: var(--gray-900); }
+    .feat-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+    /* ── BLOG ── */
+    #blog { background: var(--white); }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .blog-card {
+      border: 1px solid var(--gray-200); border-radius: var(--radius);
+      overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;
+    }
+    .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px); }
+    .blog-thumb {
+      height: 140px; display: flex; align-items: center; justify-content: center;
+      font-size: 3rem;
+    }
+    .blog-thumb.t1 { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
+    .blog-thumb.t2 { background: linear-gradient(135deg, #FEE2E2, #FECACA); }
+    .blog-thumb.t3 { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+    .blog-body { padding: 1.25rem; }
+    .blog-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 6px; }
+    .blog-card h3 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 8px; line-height: 1.4; }
+    .blog-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin-bottom: 12px; }
+    .blog-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--gray-400); }
+    .blog-meta i { font-size: 13px; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--gray-50); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 2rem; }
+    @media (max-width: 640px) { .about-grid { grid-template-columns: 1fr; } }
+    .about-visual {
+      background: linear-gradient(135deg, #1A56DB, #1E3A8A);
+      border-radius: 16px; padding: 2.5rem;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .about-stat { color: #fff; }
+    .about-stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; }
+    .about-stat-label { font-size: 13px; color: rgba(255,255,255,0.7); }
+    .about-divider { border: none; border-top: 1px solid rgba(255,255,255,0.15); }
+    .about-text h2 { font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem; }
+    .about-text p { font-size: 14px; color: var(--gray-600); line-height: 1.8; margin-bottom: 1rem; }
+    .about-values { display: flex; flex-direction: column; gap: 8px; margin-top: 1rem; }
+    .about-value { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--gray-700); }
+    .about-value i { color: var(--blue); font-size: 16px; margin-top: 2px; flex-shrink: 0; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+    @media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; } }
+    .contact-info { display: flex; flex-direction: column; gap: 1.25rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 12px; }
+    .contact-icon { width: 40px; height: 40px; background: var(--blue-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-icon i { color: var(--blue); font-size: 18px; }
+    .contact-item h4 { font-size: 14px; font-weight: 600; color: var(--gray-900); margin-bottom: 2px; }
+    .contact-item a, .contact-item p { font-size: 13px; color: var(--gray-600); text-decoration: none; }
+    .contact-item a:hover { color: var(--blue); }
+    .contact-form { display: flex; flex-direction: column; gap: 12px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; }
+    .form-group label { font-size: 13px; font-weight: 500; color: var(--gray-700); }
+    .form-group input, .form-group textarea, .form-group select {
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius-sm);
+      padding: 10px 12px; font-size: 14px; font-family: 'Inter', sans-serif;
+      color: var(--gray-900); background: var(--gray-50); transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--blue); background: #fff; }
+    .form-group textarea { min-height: 100px; resize: vertical; line-height: 1.6; }
+    .submit-btn {
+      background: var(--blue); color: #fff; border: none;
+      padding: 12px; border-radius: var(--radius-sm);
+      font-size: 15px; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover { background: var(--blue-dark); }
+    #formSuccess { display: none; background: var(--green-light); border: 1px solid #6EE7B7; border-radius: var(--radius-sm); padding: 12px; font-size: 14px; color: var(--green); text-align: center; }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #0F172A, #1E3A8A);
+      color: #fff; text-align: center;
+      padding: 4rem 1.5rem;
+    }
+    .cta-banner h2 { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+    .cta-banner p { font-size: 1rem; color: rgba(255,255,255,0.75); margin-bottom: 2rem; }
+    .cta-banner a {
+      background: #fff; color: var(--blue);
+      padding: 12px 30px; border-radius: var(--radius-sm);
+      font-weight: 700; font-size: 15px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: transform 0.2s;
+    }
+    .cta-banner a:hover { transform: scale(1.04); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gray-900); color: rgba(255,255,255,0.6);
+      padding: 2.5rem 2rem 1.5rem;
+    }
+    .footer-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand .logo-text { color: #fff; font-size: 18px; }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.45); margin-top: 8px; max-width: 220px; line-height: 1.6; }
+    .footer-links h4 { color: #fff; font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+    .footer-bottom p { font-size: 12px; }
+    .social-links { display: flex; gap: 12px; }
+    .social-links a { color: rgba(255,255,255,0.45); font-size: 18px; transition: color 0.2s; }
+    .social-links a:hover { color: #fff; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .checker-tabs { flex-wrap: wrap; }
+      .stats-strip { gap: 1.5rem; }
+      .steps { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+    <span class="logo-text">Nofakey<span>.ai</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#checker" class="nav-cta">Check now — free</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="checker">
+  <div class="hero-badge"><i class="ti ti-circle-dot"></i> Live — free to use worldwide</div>
+  <h1>Stop <span class="highlight">fake news</span> &<br/>scams before they spread</h1>
+  <p>Paste any news, WhatsApp forward, or suspicious message. Our AI tells you if it's real, fake, or a scam — in seconds.</p>
+
+  <div class="checker-card">
+    <div class="checker-tabs">
+      <button class="tab-btn active" onclick="setTab(this,'news')"><i class="ti ti-news"></i> News article</button>
+      <button class="tab-btn" onclick="setTab(this,'whatsapp')"><i class="ti ti-brand-whatsapp"></i> WhatsApp message</button>
+      <button class="tab-btn" onclick="setTab(this,'email')"><i class="ti ti-mail"></i> Email / scam</button>
+      <button class="tab-btn" onclick="setTab(this,'social')"><i class="ti ti-brand-twitter"></i> Social post</button>
+    </div>
+
+    <textarea id="newsInput" placeholder="Paste your text here... e.g. 'Government gives free money! Click here to claim now!'" oninput="updateCount()"></textarea>
+
+    <div class="checker-actions">
+      <span class="char-count" id="charCount">0 characters</span>
+      <button class="check-btn" onclick="checkNews()"><i class="ti ti-search"></i> Check it now</button>
+    </div>
+
+    <div id="result">
+      <div class="result-top">
+        <div class="result-icon" id="resultIconWrap">
+          <i id="resultIcon" class="ti"></i>
+        </div>
+        <span id="resultLabel" class="result-verdict"></span>
+        <span id="resultScore" class="result-score"></span>
+      </div>
+      <div class="trust-bar-wrap">
+        <div class="trust-bar-label">Trust score</div>
+        <div class="trust-bar-bg"><div class="trust-bar-fill" id="trustBar" style="width:0%"></div></div>
+      </div>
+      <p id="resultText" style="margin-top:10px;"></p>
+      <div class="result-tips" id="resultTips"></div>
+    </div>
+
+    <p style="font-size:12px;color:#9CA3AF;margin-top:12px;text-align:center;">
+      <i class="ti ti-lock" style="font-size:13px;vertical-align:-2px;"></i>
+      Your text is never stored. 100% private.
+    </p>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat"><div class="stat-num">2.4M+</div><div class="stat-label">Messages checked</div></div>
+  <div class="stat"><div class="stat-num">98.2%</div><div class="stat-label">Accuracy rate</div></div>
+  <div class="stat"><div class="stat-num">150+</div><div class="stat-label">Countries served</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Free to use</div></div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-inner">
+    <div class="section-eyebrow">How it works</div>
+    <h2 class="section-title">Three steps to the truth</h2>
+    <p class="section-sub">No signup needed. No technical knowledge required. Just paste and check.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Paste your content</h3>
+        <p>Copy any news headline, WhatsApp message, email, or social media post and paste it in the box above.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>AI analyzes it</h3>
+        <p>Our AI scans for fake patterns, scam language, misinformation signals, and cross-checks key claims.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Get your verdict</h3>
+        <p>Instantly see if it's Real, Fake, or Suspicious — with a trust score and a plain-language explanation.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h3>Share the truth</h3>
+        <p>Share the result with your friends and family to stop misinformation from spreading further.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-inner">
+    <div class="section-eyebrow">Features</div>
+    <h2 class="section-title">Everything you need to fight fake news</h2>
+    <p class="section-sub">Built for regular people, not just tech experts.</p>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-bolt"></i></div>
+        <h3>Instant results</h3>
+        <p>Get a verdict in under 3 seconds. No waiting, no loading screens.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-world"></i></div>
+        <h3>Any language</h3>
+        <p>Works in English, Hindi, Spanish, Arabic, French and 50+ more languages.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-lock"></i></div>
+        <h3>100% private</h3>
+        <p>We never store, sell, or share your text. Your data stays yours.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-chart-bar"></i></div>
+        <h3>Trust score</h3>
+        <p>See a 0–100 trust score so you know exactly how reliable the content is.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-device-mobile"></i></div>
+        <h3>Works on mobile</h3>
+        <p>Fully mobile-friendly. Use it directly from your phone while reading WhatsApp.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-gift"></i></div>
+        <h3>Always free</h3>
+        <p>Core fact-checking is free forever. No hidden fees or credit card required.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="section-eyebrow">Blog</div>
+    <h2 class="section-title">Learn to spot fake news yourself</h2>
+    <p class="section-sub">Tips, guides, and real examples to help you stay informed.</p>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <div class="blog-thumb t1">🔍</div>
+        <div class="blog-body">
+          <div class="blog-tag">Guide</div>
+          <h3>5 warning signs a WhatsApp message is fake</h3>
+          <p>Learn the exact phrases and patterns scammers use to trick people into sharing misinformation.</p>
+          <div class="blog-meta"><i class="ti ti-calendar"></i> June 10, 2024 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 4 min read</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb t2">⚠️</div>
+        <div class="blog-body">
+          <div class="blog-tag">Alert</div>
+          <h3>Top 10 scams spreading on social media right now</h3>
+          <p>A roundup of the most dangerous misinformation going viral this month — and how to avoid them.</p>
+          <div class="blog-meta"><i class="ti ti-calendar"></i> June 5, 2024 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 6 min read</div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-thumb t3">🤖</div>
+        <div class="blog-body">
+          <div class="blog-tag">Technology</div>
+          <h3>How AI detects fake news — explained simply</h3>
+          <p>A plain-language explanation of how our AI works and why it catches things human eyes miss.</p>
+          <div class="blog-meta"><i class="ti ti-calendar"></i> May 28, 2024 &nbsp;·&nbsp; <i class="ti ti-clock"></i> 5 min read</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-eyebrow">About us</div>
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-stat">
+          <div class="about-stat-num">2024</div>
+          <div class="about-stat-label">Founded with a mission</div>
+        </div>
+        <hr class="about-divider"/>
+        <div class="about-stat">
+          <div class="about-stat-num">150+</div>
+          <div class="about-stat-label">Countries reached</div>
+        </div>
+        <hr class="about-divider"/>
+        <div class="about-stat">
+          <div class="about-stat-num">0</div>
+          <div class="about-stat-label">Data sold. Ever.</div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">We believe everyone deserves the truth</h2>
+        <p>Nofakey.ai was built because fake news and scams are a global problem — but most tools to fight them are complicated or cost money.</p>
+        <p>We made something simple, free, and powerful enough for anyone to use — whether you're a student in India, a parent in Nigeria, or a journalist in Brazil.</p>
+        <div class="about-values">
+          <div class="about-value"><i class="ti ti-check"></i> Transparent about how our AI works</div>
+          <div class="about-value"><i class="ti ti-check"></i> Never sell or store your data</div>
+          <div class="about-value"><i class="ti ti-check"></i> Always free for regular people</div>
+          <div class="about-value"><i class="ti ti-check"></i> Built to serve everyone worldwide</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow">Contact</div>
+    <h2 class="section-title">Get in touch</h2>
+    <p class="section-sub">Have a question, found a bug, or want to partner with us? We'd love to hear from you.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-mail"></i></div>
+          <div>
+            <h4>Email us</h4>
+            <a href="mailto:nofakey.ai@gmail.com">nofakey.ai@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-world"></i></div>
+          <div>
+            <h4>Website</h4>
+            <p>nofakey.ai</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-clock"></i></div>
+          <div>
+            <h4>Response time</h4>
+            <p>We reply within 24–48 hours</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="ti ti-heart"></i></div>
+          <div>
+            <h4>Support our mission</h4>
+            <p>Share Nofakey.ai with someone who needs it</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form">
+          <div class="form-group">
+            <label for="contactName">Your name</label>
+            <input type="text" id="contactName" placeholder="e.g. Rahul Sharma"/>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Your email</label>
+            <input type="email" id="contactEmail" placeholder="you@example.com"/>
+          </div>
+          <div class="form-group">
+            <label for="contactSubject">Subject</label>
+            <select id="contactSubject">
+              <option>General question</option>
+              <option>Report a bug</option>
+              <option>Partnership inquiry</option>
+              <option>Media / press</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMsg">Message</label>
+            <textarea id="contactMsg" placeholder="Write your message here..."></textarea>
+          </div>
+          <button class="submit-btn" onclick="submitForm()"><i class="ti ti-send"></i> Send message</button>
+          <div id="formSuccess">✅ Message sent! We'll reply to you within 24–48 hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <h2>Ready to check something?</h2>
+  <p>It's free, instant, and works anywhere in the world.</p>
+  <a href="#checker"><i class="ti ti-shield-check"></i> Check a message now</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">
+        <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+        <span class="logo-text">Nofakey<span>.ai</span></span>
+      </div>
+      <p>Fighting misinformation worldwide — one check at a time.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#checker">Check now</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Terms of use</a></li>
+        <li><a href="#">Cookie policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:nofakey.ai@gmail.com">nofakey.ai@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2024 Nofakey.ai — All rights reserved</p>
+    <div class="social-links">
+      <a href="#" aria-label="Twitter"><i class="ti ti-brand-twitter"></i></a>
+      <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var currentTab = 'news';
+  var placeholders = {
+    news: "Paste a news headline or article here...",
+    whatsapp: "Paste a WhatsApp forward message here...",
+    email: "Paste a suspicious email here...",
+    social: "Paste a tweet, Facebook post, or Instagram caption here..."
+  };
+
+  function setTab(btn, tab) {
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('active'); });
+    btn.classList.add('active');
+    currentTab = tab;
+    document.getElementById('newsInput').placeholder = placeholders[tab];
+  }
+
+  function updateCount() {
+    var len = document.getElementById('newsInput').value.length;
+    document.getElementById('charCount').textContent = len + ' character' + (len !== 1 ? 's' : '');
+  }
+
+  function checkNews() {
+    var input = document.getElementById('newsInput').value.trim();
+    if (!input) { alert('Please paste some text first!'); return; }
+
+    var result = document.getElementById('result');
+    var icon = document.getElementById('resultIcon');
+    var iconWrap = document.getElementById('resultIconWrap');
+    var label = document.getElementById('resultLabel');
+    var score = document.getElementById('resultScore');
+    var text = document.getElementById('resultText');
+    var tips = document.getElementById('resultTips');
+    var bar = document.getElementById('trustBar');
+    var lower = input.toLowerCase();
+
+    var verdict, iconClass, textColor, bgColor, borderColor, iconBg, scoreStyle, desc, trustPct, tipList;
+
+    var scamWords = ['free money','click here','claim now','share this','forward this','act now','limited time','you have won','congratulations you','wire transfer','send your details','bank account','whatsapp forward'];
+    var fakeWords = ['breaking','shocking','you won\'t believe','mainstream media hiding','they don\'t want you','secret cure','government hiding','100% proven','miracle'];
+    var scamFound = scamWords.some(function(w){ return lower.includes(w); });
+    var fakeFound = fakeWords.some(function(w){ return lower.includes(w); });
+
+    if (scamFound) {
+      verdict = 'SCAM DETECTED';
+      iconClass = 'ti-alert-octagon';
+      textColor = '#991B1B'; bgColor = '#FEE2E2'; borderColor = '#FCA5A5'; iconBg = '#FEE2E2';
+      scoreStyle = 'background:#FEE2E2;color:#991B1B;';
+      desc = 'This message contains classic scam patterns — urgent language, promises of free rewards, or requests to share personal details. Do not click any links or share your information.';
+      trustPct = 8;
+      tipList = ['Do not click any links','Do not share personal info','Report to your contacts','Block the sender'];
+    } else if (fakeFound) {
+      verdict = 'LIKELY FAKE';
+      iconClass = 'ti-circle-x';
+      textColor = '#92400E'; bgColor = '#FEF3C7'; borderColor = '#FCD34D'; iconBg = '#FEF3C7';
+      scoreStyle = 'background:#FEF3C7;color:#92400E;';
+      desc = 'This content uses sensational or manipulative language commonly found in misleading news. Please verify with a trusted news source before sharing.';
+      trustPct = 22;
+      tipList = ['Verify on BBC / Reuters','Check the original source','Don\'t share until verified','Search the headline online'];
+    } else if (input.length < 30) {
+      verdict = 'TOO SHORT';
+      iconClass = 'ti-help-circle';
+      textColor = '#1E3A8A'; bgColor = '#EFF6FF'; borderColor = '#BFDBFE'; iconBg = '#EFF6FF';
+      scoreStyle = 'background:#EFF6FF;color:#1E3A8A;';
+      desc = 'Please paste more text for an accurate analysis. The more context you provide, the better our AI can judge.';
+      trustPct = 50;
+      tipList = ['Paste the full message','Include the headline','Add more context'];
+    } else {
+      verdict = 'LOOKS REAL';
+      iconClass = 'ti-circle-check';
+      textColor = '#065F46'; bgColor = '#D1FAE5'; borderColor = '#6EE7B7'; iconBg = '#D1FAE5';
+      scoreStyle = 'background:#D1FAE5;color:#065F46;';
+      desc = 'No obvious fake or scam signals detected. This content appears to be genuine. Always double-check important news with trusted sources like Reuters, BBC, or AP News.';
+      trustPct = 85;
+      tipList = ['Still verify important claims','Check the original source','Trusted: Reuters, BBC, AP'];
+    }
+
+    result.style.display = 'block';
+    result.style.background = bgColor;
+    result.style.borderColor = borderColor;
+    iconWrap.style.background = iconBg;
+    icon.className = 'ti ' + iconClass;
+    icon.style.color = textColor;
+    label.textContent = verdict;
+    label.style.color = textColor;
+    score.textContent = 'Trust: ' + trustPct + '%';
+    score.style.cssText = scoreStyle;
+    text.textContent = desc;
+    bar.style.width = trustPct + '%';
+    bar.style.background = trustPct < 30 ? '#EF4444' : trustPct < 60 ? '#F59E0B' : '#10B981';
+
+    tips.innerHTML = tipList.map(function(t){
+      return '<span class="tip-tag"><i class="ti ti-arrow-right"></i>' + t + '</span>';
+    }).join('');
+
+    result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function submitForm() {
+    var name = document.getElementById('contactName').value.trim();
+    var email = document.getElementById('contactEmail').value.trim();
+    var msg = document.getElementById('contactMsg').value.trim();
+    if (!name || !email || !msg) { alert('Please fill in all fields.'); return; }
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('contactName').value = '';
+    document.getElementById('contactEmail').value = '';
+    document.getElementById('contactMsg').value = '';
+  }
+</script>
+</body>
+</html>
