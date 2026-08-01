@@ -1,0 +1,15 @@
+# Nofakey.ai
+
+> A free, privacy-first tool that checks WhatsApp messages, emails, and news
+> text for common scam and misinformation wording patterns. Not a full
+> fact-checking service — a fast first-pass filter, plus guides that help
+> people verify claims themselves.
+
+## Pages
+- [Home](https://nofakey-ai.github.io/): Free spam & fake news checker
+- [Blog](https://nofakey-ai.github.io/blog.html): Guides on spotting fake news and scams
+- [About](https://nofakey-ai.github.io/about.html): What Nofakey.ai is and isn't
+- [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
+
+## Blog posts
+- [How to Check If a WhatsApp Message Is Fake](https://nofakey-ai.github.io/how-to-check-if-a-whatsapp-message-is-fake.html): A practical, no-jargon checklist for spotting fake WhatsApp forwards and scam messages before you share or act on them.
