@@ -3,37 +3,34 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Free Fake News & Scam Message Checker | Nofakey.ai</title>
-  <meta name="description" content="Paste any WhatsApp forward, email, or news article and check it for common scam and misinformation wording patterns in seconds. Free, private, no signup required."/>
-  <link rel="canonical" href="https://nofakey.ai/"/>
+  <title>Free Spam & Fake News Checker | Nofakey.ai</title>
+  <meta name="description" content="Check WhatsApp, email & news messages for scam and spam patterns free, in seconds. Plus guides to help you and your family spot fake news online."/>
+  <link rel="canonical" href="https://nofakey-ai.github.io/"/>
   <meta name="robots" content="index, follow"/>
   <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
-
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Nofakey.ai"/>
-  <meta property="og:title" content="Free Fake News & Scam Message Checker | Nofakey.ai"/>
-  <meta property="og:description" content="Paste any WhatsApp forward, email, or news article and check it for common scam and misinformation wording patterns in seconds. Free, private, no signup required."/>
-  <meta property="og:url" content="https://nofakey.ai/"/>
-  <meta property="og:image" content="https://nofakey.ai/og-image.png"/>
+  <link rel="alternate" type="application/rss+xml" title="Nofakey.ai Blog" href="rss.xml"/>
+  <meta property="og:description" content="Check WhatsApp, email & news messages for scam and spam patterns free, in seconds. Plus guides to help you and your family spot fake news online."/>
+  <meta property="og:url" content="https://nofakey-ai.github.io/"/>
+  <meta property="og:image" content="https://nofakey-ai.github.io/og-image.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Free Fake News & Scam Message Checker | Nofakey.ai"/>
-  <meta name="twitter:description" content="Paste any WhatsApp forward, email, or news article and check it for common scam and misinformation wording patterns in seconds."/>
-  <meta name="twitter:image" content="https://nofakey.ai/og-image.png"/>
+  <meta name="twitter:title" content="Free Spam & Fake News Checker | Nofakey.ai"/>
+  <meta name="twitter:description" content="Check WhatsApp, email & news messages for scam and spam patterns free, in seconds. Plus guides to spot fake news online."/>
+  <meta name="twitter:image" content="https://nofakey-ai.github.io/og-image.png"/>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Nofakey.ai",
-    "url": "https://nofakey.ai/",
+    "url": "https://nofakey-ai.github.io/",
     "description": "A free, privacy-first tool that checks text for common fake-news and scam wording patterns.",
     "publisher": {
       "@type": "Organization",
       "name": "Nofakey.ai",
-      "url": "https://nofakey.ai/",
-      "logo": "https://nofakey.ai/favicon.svg"
+      "url": "https://nofakey-ai.github.io/",
+      "logo": "https://nofakey-ai.github.io/favicon.svg"
     }
   }
   </script>
@@ -42,7 +39,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Nofakey.ai Fake News & Scam Checker",
-    "url": "https://nofakey.ai/",
+    "url": "https://nofakey-ai.github.io/",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any (web-based)",
     "offers": {
@@ -287,24 +284,63 @@
 
     /* ── BLOG ── */
     #blog { background: var(--gray-50); }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.75rem; margin-top: 2.5rem; }
     .blog-card {
-      background: var(--white);
+      background: var(--white); text-decoration: none; display: block; color: inherit;
       border: 1px solid var(--gray-200); border-radius: var(--radius);
-      overflow: hidden; transition: box-shadow 0.2s, transform 0.2s; cursor: pointer;
+      overflow: hidden; transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
     }
-    .blog-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px); }
+    .blog-card:hover { box-shadow: 0 14px 32px rgba(26,86,219,0.14); transform: translateY(-6px); border-color: var(--blue-light); }
     .blog-thumb {
-      height: 140px; display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
+      height: 150px; display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; isolation: isolate;
     }
+    .blog-thumb::before, .blog-thumb::after {
+      content: ''; position: absolute; border-radius: 50%; filter: blur(28px); opacity: 0.6;
+      animation: blobFloat 9s ease-in-out infinite;
+    }
+    .blog-thumb::before { width: 130px; height: 130px; top: -35px; left: -25px; }
+    .blog-thumb::after { width: 110px; height: 110px; bottom: -35px; right: -15px; animation-delay: -4.5s; }
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0,0) scale(1); }
+      50% { transform: translate(12px,-10px) scale(1.18); }
+    }
+    .blog-thumb .shine {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.55), transparent 60%);
+      opacity: 0; transition: opacity 0.3s ease;
+    }
+    .blog-card:hover .shine { opacity: 1; }
+    .blog-thumb-icon-float { position: relative; z-index: 1; animation: iconFloat 3s ease-in-out infinite; }
+    @keyframes iconFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+    .blog-thumb-icon-wrap {
+      width: 62px; height: 62px; border-radius: 50%;
+      background: rgba(255,255,255,0.7); backdrop-filter: blur(6px);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 10px 24px rgba(15,23,42,0.12);
+      transition: transform 0.35s ease;
+    }
+    .blog-thumb-icon-wrap i { font-size: 26px; }
+    .blog-card:hover .blog-thumb-icon-wrap { transform: scale(1.16) rotate(-8deg); }
     .blog-thumb.t1 { background: linear-gradient(135deg, #EDE9FE, #DDD6FE); }
+    .blog-thumb.t1::before { background: #8B5CF6; }
+    .blog-thumb.t1::after { background: #6366F1; }
+    .blog-thumb.t1 .blog-thumb-icon-wrap i { color: #6D28D9; }
     .blog-thumb.t2 { background: linear-gradient(135deg, #FEE2E2, #FECACA); }
+    .blog-thumb.t2::before { background: #F87171; }
+    .blog-thumb.t2::after { background: #FB923C; }
+    .blog-thumb.t2 .blog-thumb-icon-wrap i { color: #DC2626; }
     .blog-thumb.t3 { background: linear-gradient(135deg, #D1FAE5, #A7F3D0); }
+    .blog-thumb.t3::before { background: #34D399; }
+    .blog-thumb.t3::after { background: #10B981; }
+    .blog-thumb.t3 .blog-thumb-icon-wrap i { color: #059669; }
     .blog-body { padding: 1.25rem; }
     .blog-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 6px; }
-    .blog-card h3 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 8px; line-height: 1.4; }
-    .blog-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+    .blog-card h3 { font-size: 15px; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; line-height: 1.4; }
+    .blog-card p { font-size: 13px; color: var(--gray-600); line-height: 1.6; margin-bottom: 12px; }
+    .blog-readmore { font-size: 13px; font-weight: 600; color: var(--blue); display: inline-flex; align-items: center; gap: 4px; }
+    .blog-readmore i { transition: transform 0.2s ease; }
+    .blog-card:hover .blog-readmore i { transform: translateX(3px); }
 
     /* ── ABOUT ── */
     #about { background: var(--white); }
@@ -518,6 +554,32 @@
   </div>
 </section>
 
+<!-- BLOG PREVIEW (auto-generated — do not edit between the markers by hand) -->
+<section id="blog-preview" style="background: var(--white);">
+  <div class="section-inner">
+    <div class="section-eyebrow">From the blog</div>
+    <h2 class="section-title">Latest guides to help you stay safe</h2>
+    <p class="section-sub">New posts on spotting fake news and scams, added regularly.</p>
+    <div class="blog-grid" style="margin-top:2.5rem;">
+      <!-- BLOG_PREVIEW_START -->
+      <a class="blog-card" href="how-to-check-if-a-whatsapp-message-is-fake.html">
+        <div class="blog-thumb t1">
+          <div class="shine"></div>
+          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><i class="ti ti-zoom-scan"></i></span></div>
+        </div>
+        <div class="blog-body">
+          <div class="blog-tag">Guide</div>
+          <h3>How to Check If a WhatsApp Message Is Fake</h3>
+          <p>A practical, no-jargon checklist for spotting fake WhatsApp forwards and scam messages before you share or act on them.</p>
+          <span class="blog-readmore">Read the guide <i class="ti ti-arrow-right"></i></span>
+        </div>
+      </a>
+      <!-- BLOG_PREVIEW_END -->
+    </div>
+    <p style="margin-top: 2rem;"><a href="blog.html" style="color: var(--blue); font-weight: 600; text-decoration: none; font-size: 14px;">View all posts <i class="ti ti-arrow-right" style="vertical-align:-2px;"></i></a></p>
+  </div>
+</section>
+
 <!-- CTA BANNER -->
 <div class="cta-banner">
   <h2>Ready to check something?</h2>
@@ -544,6 +606,8 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="rss.xml">RSS Feed</a></li>
       </ul>
     </div>
     <div class="footer-links">
