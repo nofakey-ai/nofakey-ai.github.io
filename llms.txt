@@ -12,4 +12,5 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a Job Offer Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-job-offer-message-is-a-scam.html): Got an unexpected job offer on WhatsApp or email? Here's how to tell a real opportunity from a scam before you hand over any money or details.
 - [How to Check If a WhatsApp Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-whatsapp-message-is-fake.html): A practical, no-jargon checklist for spotting fake WhatsApp forwards and scam messages before you share or act on them.
