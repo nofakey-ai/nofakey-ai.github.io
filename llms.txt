@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a Loan Offer Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-loan-offer-message-is-a-scam.html): A text says you're pre-approved for an instant loan if you pay a small fee first? Here's how to tell a real loan offer from a scam.
 - [How to Check If a Bank Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-bank-message-is-fake.html): Got a text saying your bank account will be blocked unless you 'update KYC' right now? Here's how to tell if a bank message is real or a scam.
 - [How to Check If a Delivery Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-delivery-message-is-a-scam.html): A text says your parcel is stuck and needs a small fee to be released? Here's how to tell a real delivery notice from a scam before you pay anything.
 - [How to Check If a Job Offer Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-job-offer-message-is-a-scam.html): Got an unexpected job offer on WhatsApp or email? Here's how to tell a real opportunity from a scam before you hand over any money or details.
