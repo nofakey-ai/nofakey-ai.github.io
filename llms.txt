@@ -13,6 +13,7 @@
 
 ## Blog posts
 - [How to Check If a Shopping Website Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-shopping-website-is-fake.html): A deal looks amazing but you've never heard of the store? Here's how to check if a shopping website is fake before you enter your card details.
+- [How to Check If an Investment Tip Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-an-investment-tip-is-a-scam.html): A WhatsApp contact or group is promising big, steady returns on an investment? Here's how to tell a real opportunity from a scam.
 - [How to Check If a Customer Care Number Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-customer-care-number-is-fake.html): Found a helpline number through a search or ad and something feels off? Here's how to tell a real customer care line from a scam.
 - [How to Check If a Loan Offer Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-loan-offer-message-is-a-scam.html): A text says you're pre-approved for an instant loan if you pay a small fee first? Here's how to tell a real loan offer from a scam.
 - [How to Check If a Bank Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-bank-message-is-fake.html): Got a text saying your bank account will be blocked unless you 'update KYC' right now? Here's how to tell if a bank message is real or a scam.
