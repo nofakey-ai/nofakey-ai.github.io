@@ -92,6 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       --gray-200: #E5E7EB;
       --gray-400: #9CA3AF;
       --gray-600: #4B5563;
+      --gray-700: #374151;
       --gray-800: #1F2937;
       --gray-900: #111827;
       --white: #ffffff;
@@ -117,6 +118,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       outline: 2px solid var(--blue);
       outline-offset: 2px;
     }
+
+    .icon {
+      width: 1em; height: 1em; display: inline-block; vertical-align: -0.125em; flex-shrink: 0;
+      fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .icon.spin { animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
     /* ── NAV ── */
     nav {
@@ -233,6 +241,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .field-error { display: none; font-size: 13px; color: var(--red); margin-top: 6px; }
 
+    .example-chips { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .example-label { font-size: 12px; color: var(--gray-400); }
+    .example-chip {
+      font-size: 12px; font-weight: 500; color: var(--gray-600);
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: 999px; padding: 5px 12px; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 5px;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .example-chip i { font-size: 13px; }
+    .example-chip:hover { background: var(--blue-light); border-color: var(--blue); color: var(--blue-dark); }
+
     /* ── RESULT BOX ── */
     #result {
       display: none; margin-top: 1.25rem;
@@ -249,6 +269,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       padding: 4px 12px; border-radius: 999px;
     }
     #resultText { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+    .result-signals { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+    .signal-item {
+      display: flex; align-items: flex-start; gap: 8px; font-size: 13px;
+      color: var(--gray-700); background: rgba(255,255,255,0.6); border-radius: var(--radius-sm);
+      padding: 7px 10px;
+    }
+    .signal-item i { font-size: 14px; margin-top: 1px; flex-shrink: 0; }
     .result-tips { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
     .tip-tag {
       font-size: 12px; padding: 3px 10px;
@@ -256,6 +283,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       color: var(--gray-600); display: flex; align-items: center; gap: 4px;
     }
     .tip-tag i { font-size: 12px; }
+    .result-guide { margin-top: 12px; }
+    .result-guide a {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 13px; font-weight: 600; color: var(--blue);
+      background: var(--white); border: 1px solid var(--blue-light);
+      padding: 8px 14px; border-radius: var(--radius-sm); text-decoration: none;
+      transition: background 0.2s;
+    }
+    .result-guide a:hover { background: var(--blue-light); }
+    .share-btn {
+      margin-top: 12px; width: 100%;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: var(--white); border: 1.5px solid var(--gray-200);
+      color: var(--gray-700); font-size: 13px; font-weight: 600;
+      padding: 10px; border-radius: var(--radius-sm); cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .share-btn:hover { background: var(--gray-50); border-color: var(--gray-400); }
+    .share-btn.copied { background: var(--green-light); border-color: #6EE7B7; color: var(--green); }
 
     /* ── TRUST BAR ── */
     .trust-bar-wrap { margin-top: 10px; }
@@ -461,10 +507,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+
 <!-- NAV -->
 <nav>
   <a href="#" class="logo">
-    <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+    <div class="logo-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></svg></div>
     <span class="logo-text">Nofakey<span>.ai</span></span>
   </a>
   <ul class="nav-links">
@@ -476,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div style="display:flex; align-items:center; gap:12px;">
     <a href="#checker" class="nav-cta">Check now — free</a>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <i class="ti ti-menu-2"></i>
+      <svg class="icon" viewBox="0 0 24 24"><path d="M4 6l16 0" /> <path d="M4 12l16 0" /> <path d="M4 18l16 0" /></svg>
     </button>
   </div>
 </nav>
@@ -490,16 +537,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
 <!-- HERO -->
 <section class="hero" id="checker">
-  <div class="hero-badge"><i class="ti ti-circle-dot"></i> Free to use, no signup</div>
+  <div class="hero-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /></svg> Free to use, no signup</div>
   <h1>Stop <span class="highlight">fake news</span> &<br/>scams before they spread</h1>
   <p>Paste any news, WhatsApp forward, or suspicious message. We flag common fake-news and scam patterns in seconds — and point you to how to verify it yourself.</p>
 
   <div class="checker-card">
     <div class="checker-tabs" role="tablist" aria-label="Content type">
-      <button class="tab-btn active" onclick="setTab(this,'news')" role="tab" aria-selected="true"><i class="ti ti-news"></i> News article</button>
-      <button class="tab-btn" onclick="setTab(this,'whatsapp')" role="tab" aria-selected="false"><i class="ti ti-brand-whatsapp"></i> WhatsApp message</button>
-      <button class="tab-btn" onclick="setTab(this,'email')" role="tab" aria-selected="false"><i class="ti ti-mail"></i> Email / scam</button>
-      <button class="tab-btn" onclick="setTab(this,'social')" role="tab" aria-selected="false"><i class="ti ti-brand-twitter"></i> Social post</button>
+      <button class="tab-btn active" onclick="setTab(this,'news')" role="tab" aria-selected="true"><svg class="icon" viewBox="0 0 24 24"><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" /> <path d="M8 8l4 0" /> <path d="M8 12l4 0" /> <path d="M8 16l4 0" /></svg> News article</button>
+      <button class="tab-btn" onclick="setTab(this,'whatsapp')" role="tab" aria-selected="false"><svg class="icon" viewBox="0 0 24 24"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /> <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg> WhatsApp message</button>
+      <button class="tab-btn" onclick="setTab(this,'email')" role="tab" aria-selected="false"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M3 7l9 6l9 -6" /></svg> Email / scam</button>
+      <button class="tab-btn" onclick="setTab(this,'social')" role="tab" aria-selected="false"><svg class="icon" viewBox="0 0 24 24"><path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013l0 .001" /></svg> Social post</button>
+    </div>
+
+    <div class="example-chips">
+      <span class="example-label">Try an example:</span>
+      <button type="button" class="example-chip" onclick="loadExample('lottery')"><i class="ti ti-trophy"></i> Lottery win</button>
+      <button type="button" class="example-chip" onclick="loadExample('bank')"><i class="ti ti-building-bank"></i> Bank alert</button>
+      <button type="button" class="example-chip" onclick="loadExample('job')"><i class="ti ti-briefcase"></i> Job offer</button>
+      <button type="button" class="example-chip" onclick="loadExample('safe')"><i class="ti ti-circle-check"></i> A normal message</button>
     </div>
 
     <label for="newsInput" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Paste the text you want checked</label>
@@ -508,13 +563,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="checker-actions">
       <span class="char-count" id="charCount">0 characters</span>
-      <button class="check-btn" id="checkBtn" onclick="checkNews()"><i class="ti ti-search"></i> Check it now</button>
+      <button class="check-btn" id="checkBtn" onclick="checkNews()"><svg class="icon" viewBox="0 0 24 24"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></svg> Check it now</button>
     </div>
 
     <div id="result" role="status" aria-live="polite">
       <div class="result-top">
         <div class="result-icon" id="resultIconWrap">
-          <i id="resultIcon" class="ti"></i>
+          <span id="resultIcon"></span>
         </div>
         <span id="resultLabel" class="result-verdict"></span>
         <span id="resultScore" class="result-score"></span>
@@ -524,20 +579,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="trust-bar-bg"><div class="trust-bar-fill" id="trustBar" style="width:0%"></div></div>
       </div>
       <p id="resultText" style="margin-top:10px;"></p>
+      <div class="result-signals" id="resultSignals"></div>
       <div class="result-tips" id="resultTips"></div>
+      <div class="result-guide" id="resultGuide"></div>
+      <button type="button" class="share-btn" id="shareBtn" onclick="shareResult()"><svg class="icon" viewBox="0 0 24 24"><path d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7" /></svg> Share this check</button>
     </div>
 
     <p style="font-size:12px;color:#9CA3AF;margin-top:12px;text-align:center;">
-      <i class="ti ti-lock" style="font-size:13px;vertical-align:-2px;"></i>
+      <svg class="icon" style="font-size:13px;vertical-align:-2px;" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg>
       Your text isn't stored or shared — it's checked in your browser session only.
     </p>
   </div>
 
   <div class="trust-badges">
-    <span class="trust-badge"><i class="ti ti-lock"></i> Nothing you paste is stored</span>
-    <span class="trust-badge"><i class="ti ti-login-2"></i> No signup or account needed</span>
-    <span class="trust-badge"><i class="ti ti-gift"></i> Free, no hidden fees</span>
-    <span class="trust-badge"><i class="ti ti-device-mobile"></i> Works on any device</span>
+    <span class="trust-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6" /> <path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /> <path d="M8 11v-4a4 4 0 1 1 8 0v4" /></svg> Nothing you paste is stored</span>
+    <span class="trust-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M9 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" /> <path d="M3 12h13l-3 -3" /> <path d="M13 15l3 -3" /></svg> No signup or account needed</span>
+    <span class="trust-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M3 9a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -2" /> <path d="M12 8l0 13" /> <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" /> <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" /></svg> Free, no hidden fees</span>
+    <span class="trust-badge"><svg class="icon" viewBox="0 0 24 24"><path d="M6 5a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-14" /> <path d="M11 4h2" /> <path d="M12 17v.01" /></svg> Works on any device</span>
   </div>
 </section>
 
@@ -553,27 +611,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="section-sub">No signup needed. No technical knowledge required. Just paste and check.</p>
     <div class="steps">
       <div class="step">
-        <div class="step-num"><i class="ti ti-clipboard-text"></i></div>
+        <div class="step-num"><svg class="icon" viewBox="0 0 24 24"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2" /> <path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" /> <path d="M9 12h6" /> <path d="M9 16h6" /></svg></div>
         <h3>Paste your content</h3>
         <p>Copy any news headline, WhatsApp message, email, or social media post and paste it in the box above.</p>
       </div>
       <div class="step">
-        <div class="step-num"><i class="ti ti-scan"></i></div>
+        <div class="step-num"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14" /> <path d="M3 7v-2a2 2 0 0 1 2 -2h2" /> <path d="M3 17v2a2 2 0 0 0 2 2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M17 21h2a2 2 0 0 0 2 -2v-2" /></svg></div>
         <h3>We scan the wording</h3>
         <p>We check the text against wording patterns commonly found in scams and misleading news — urgency, pressure to share, and sensational claims.</p>
       </div>
       <div class="step">
-        <div class="step-num"><i class="ti ti-report"></i></div>
+        <div class="step-num"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h5.697" /> <path d="M18 14v4h4" /> <path d="M18 11v-4a2 2 0 0 0 -2 -2h-2" /> <path d="M8 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2" /> <path d="M14 18a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /> <path d="M8 11h4" /> <path d="M8 15h3" /></svg></div>
         <h3>Get a starting point</h3>
         <p>See a quick read — Real, Fake, or Suspicious — with a trust score and plain-language next steps for verifying it further.</p>
       </div>
       <div class="step">
-        <div class="step-num"><i class="ti ti-share"></i></div>
+        <div class="step-num"><svg class="icon" viewBox="0 0 24 24"><path d="M3 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M15 6a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M15 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.7 10.7l6.6 -3.4" /> <path d="M8.7 13.3l6.6 3.4" /></svg></div>
         <h3>Share the caution, not the claim</h3>
         <p>If something looks off, share the warning with friends and family instead of forwarding the original message.</p>
       </div>
     </div>
-    <p style="margin-top: 2rem;"><a href="blog.html" style="color: var(--blue); font-weight: 600; text-decoration: none; font-size: 14px;">Read more tips on our blog <i class="ti ti-arrow-right" style="vertical-align:-2px;"></i></a></p>
+    <p style="margin-top: 2rem;"><a href="blog.html" style="color: var(--blue); font-weight: 600; text-decoration: none; font-size: 14px;">Read more tips on our blog <svg class="icon" style="vertical-align:-2px;" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></a></p>
   </div>
 </section>
 
@@ -588,42 +646,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="blog-card" href="blog/how-to-check-if-a-dating-profile-is-fake.html">
         <div class="blog-thumb t3">
           <div class="shine"></div>
-          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><i class="ti ti-shield-check"></i></span></div>
+          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></svg></span></div>
         </div>
         <div class="blog-body">
           <div class="blog-tag">Guide</div>
           <h3>How to Check If a Dating Profile Is Fake</h3>
           <p>A new match feels a little too perfect, a little too fast? Here's how to tell a real dating or matrimonial profile from a fake one.</p>
-          <span class="blog-readmore">Read the guide <i class="ti ti-arrow-right"></i></span>
+          <span class="blog-readmore">Read the guide <svg class="icon" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></span>
         </div>
       </a>
       <a class="blog-card" href="blog/how-to-check-if-a-government-scheme-message-is-fake.html">
         <div class="blog-thumb t2">
           <div class="shine"></div>
-          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><i class="ti ti-alert-triangle"></i></span></div>
+          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" /> <path d="M12 16h.01" /></svg></span></div>
         </div>
         <div class="blog-body">
           <div class="blog-tag">Alert</div>
           <h3>How to Check If a Government Scheme Message Is Fake</h3>
           <p>A text claims you're eligible for a government scheme or subsidy if you pay a small fee first? Here's how to tell if it's real.</p>
-          <span class="blog-readmore">Read the guide <i class="ti ti-arrow-right"></i></span>
+          <span class="blog-readmore">Read the guide <svg class="icon" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></span>
         </div>
       </a>
       <a class="blog-card" href="blog/how-to-check-if-a-shopping-website-is-fake.html">
         <div class="blog-thumb t1">
           <div class="shine"></div>
-          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><i class="ti ti-zoom-scan"></i></span></div>
+          <div class="blog-thumb-icon-float"><span class="blog-thumb-icon-wrap"><svg class="icon" viewBox="0 0 24 24"><path d="M8 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /> <path d="M16 16l-2.5 -2.5" /> <path d="M3 7v-2a2 2 0 0 1 2 -2h2" /> <path d="M3 17v2a2 2 0 0 0 2 2h2" /> <path d="M17 3h2a2 2 0 0 1 2 2v2" /> <path d="M17 21h2a2 2 0 0 0 2 -2v-2" /></svg></span></div>
         </div>
         <div class="blog-body">
           <div class="blog-tag">Guide</div>
           <h3>How to Check If a Shopping Website Is Fake</h3>
           <p>A deal looks amazing but you've never heard of the store? Here's how to check if a shopping website is fake before you enter your card details.</p>
-          <span class="blog-readmore">Read the guide <i class="ti ti-arrow-right"></i></span>
+          <span class="blog-readmore">Read the guide <svg class="icon" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></span>
         </div>
       </a>
       <!-- BLOG_PREVIEW_END -->
     </div>
-    <p style="margin-top: 2rem;"><a href="blog.html" style="color: var(--blue); font-weight: 600; text-decoration: none; font-size: 14px;">View all posts <i class="ti ti-arrow-right" style="vertical-align:-2px;"></i></a></p>
+    <p style="margin-top: 2rem;"><a href="blog.html" style="color: var(--blue); font-weight: 600; text-decoration: none; font-size: 14px;">View all posts <svg class="icon" style="vertical-align:-2px;" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></a></p>
   </div>
 </section>
 
@@ -631,7 +689,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cta-banner">
   <h2>Ready to check something?</h2>
   <p>It's free and takes a few seconds.</p>
-  <a href="#checker"><i class="ti ti-shield-check"></i> Check a message now</a>
+  <a href="#checker"><svg class="icon" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></svg> Check a message now</a>
 </div>
 </main>
 
@@ -640,7 +698,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer-top">
     <div class="footer-brand">
       <div class="logo">
-        <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+        <div class="logo-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06" /> <path d="M15 19l2 2l4 -4" /></svg></div>
         <span class="logo-text">Nofakey<span>.ai</span></span>
       </div>
       <p>A quick first-pass check for fake news and scams.</p>
@@ -691,6 +749,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
+  // Inline SVG icon registry — avoids depending on an external icon-font
+  // CDN (some preview/embedded environments block third-party requests,
+  // which silently breaks font-icons but never breaks inline SVG).
+  var ICON_PATHS = {
+    'help-circle': '<path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /> <path d="M12 16v.01" /> <path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" />',
+    'alert-octagon': '<path d="M12.802 2.165l5.575 2.389c.48 .206 .863 .589 1.07 1.07l2.388 5.574c.22 .512 .22 1.092 0 1.604l-2.389 5.575c-.206 .48 -.589 .863 -1.07 1.07l-5.574 2.388c-.512 .22 -1.092 .22 -1.604 0l-5.575 -2.389a2.036 2.036 0 0 1 -1.07 -1.07l-2.388 -5.574a2.036 2.036 0 0 1 0 -1.604l2.389 -5.575c.206 -.48 .589 -.863 1.07 -1.07l5.574 -2.388a2.036 2.036 0 0 1 1.604 0" /> <path d="M12 8v4" /> <path d="M12 16h.01" />',
+    'alert-triangle': '<path d="M12 9v4" /> <path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0" /> <path d="M12 16h.01" />',
+    'circle-check': '<path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /> <path d="M9 12l2 2l4 -4" />',
+    'currency-rupee': '<path d="M18 5h-11h3a4 4 0 0 1 0 8h-3l6 6" /> <path d="M7 9l11 0" />',
+    'lock-access': '<path d="M4 8v-2a2 2 0 0 1 2 -2h2" /> <path d="M4 16v2a2 2 0 0 0 2 2h2" /> <path d="M16 4h2a2 2 0 0 1 2 2v2" /> <path d="M16 20h2a2 2 0 0 0 2 -2v-2" /> <path d="M8 12a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v3a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1l0 -3" /> <path d="M10 11v-2a2 2 0 1 1 4 0v2" />',
+    'gift': '<path d="M3 9a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1l0 -2" /> <path d="M12 8l0 13" /> <path d="M19 12v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-7" /> <path d="M7.5 8a2.5 2.5 0 0 1 0 -5a4.8 8 0 0 1 4.5 5a4.8 8 0 0 1 4.5 -5a2.5 2.5 0 0 1 0 5" />',
+    'clock-exclamation': '<path d="M20.986 12.502a9 9 0 1 0 -5.973 7.98" /> <path d="M12 7v5l3 3" /> <path d="M19 16v3" /> <path d="M19 22v.01" />',
+    'mail-opened': '<path d="M3 9l9 6l9 -6l-9 -6l-9 6" /> <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" /> <path d="M3 19l6 -6" /> <path d="M15 13l6 6" />',
+    'building-bank': '<path d="M3 21l18 0" /> <path d="M3 10l18 0" /> <path d="M5 6l7 -3l7 3" /> <path d="M4 10l0 11" /> <path d="M20 10l0 11" /> <path d="M8 14l0 3" /> <path d="M12 14l0 3" /> <path d="M16 14l0 3" />',
+    'share': '<path d="M3 12a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M15 6a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M15 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /> <path d="M8.7 10.7l6.6 -3.4" /> <path d="M8.7 13.3l6.6 3.4" />',
+    'link': '<path d="M9 15l6 -6" /> <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /> <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" />',
+    'world-exclamation': '<path d="M20.986 12.51a9 9 0 1 0 -5.71 7.873" /> <path d="M3.6 9h16.8" /> <path d="M3.6 15h10.9" /> <path d="M11.5 3a17 17 0 0 0 0 18" /> <path d="M12.5 3a17 17 0 0 1 0 18" /> <path d="M19 16v3" /> <path d="M19 22v.01" />',
+    'world-off': '<path d="M5.657 5.615a9 9 0 1 0 12.717 12.739m1.672 -2.322a9 9 0 0 0 -12.066 -12.084" /> <path d="M3.6 9h5.4m4 0h7.4" /> <path d="M3.6 15h11.4m4 0h1.4" /> <path d="M11.5 3a17.001 17.001 0 0 0 -1.493 3.022m-.847 3.145c-.68 4.027 .1 8.244 2.34 11.833" /> <path d="M12.5 3a16.982 16.982 0 0 1 2.549 8.005m-.207 3.818a16.979 16.979 0 0 1 -2.342 6.177" /> <path d="M3 3l18 18" />',
+    'briefcase': '<path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" /> <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /> <path d="M12 12l0 .01" /> <path d="M3 13a20 20 0 0 0 18 0" />',
+    'trophy': '<path d="M8 21l8 0" /> <path d="M12 17l0 4" /> <path d="M7 4l10 0" /> <path d="M17 4v8a5 5 0 0 1 -10 0v-8" /> <path d="M3 9a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /> <path d="M17 9a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />'
+  };
+  function svgIcon(name, extraStyle) {
+    var body = ICON_PATHS[name] || '';
+    var style = extraStyle ? ' style="' + extraStyle + '"' : '';
+    return '<svg class="icon"' + style + ' viewBox="0 0 24 24">' + body + '</svg>';
+  }
+
   var currentTab = 'news';
   var placeholders = {
     news: "Paste a news headline or article here...",
@@ -713,6 +798,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('fieldError').style.display = 'none';
   }
 
+  // ---- Advanced pattern-checking engine ----
+  // Each category below carries its own weight; multiple matches compound,
+  // giving a graduated score instead of a single yes/no keyword hit.
+  var SIGNAL_CATEGORIES = [
+    { id: 'payment', label: 'Asks for a fee or payment upfront', icon: 'currency-rupee', weight: 28,
+      keywords: ['processing fee','registration fee','refundable deposit','release fee','customs fee','gst charge','activation fee','pay to claim','courier fee','redelivery fee','security deposit','advance payment','pay ₹','pay rs','security fee'] },
+    { id: 'credentials', label: 'Asks for OTP, PIN, CVV, or account details', icon: 'lock-access', weight: 26,
+      keywords: ['otp','cvv','pin number','update your kyc','verify your account','confirm your details','net banking password','card number','one time password','share your otp'] },
+    { id: 'toogood', label: 'Promises unrealistic rewards', icon: 'gift', weight: 18,
+      keywords: ['guaranteed profit','100% profit','double your money','risk free','free money','you have won','you\'ve won','congratulations you','zero documents','pre-approved','no credit check','guaranteed returns'] },
+    { id: 'urgency', label: 'Uses urgency or pressure language', icon: 'clock-exclamation', weight: 14,
+      keywords: ['act now','immediately','urgent','within 24 hours','expire today','expires today','limited time','last chance','act fast','right away',"before it's too late",'hurry',"don't delay",'blocked today','suspended today'] },
+    { id: 'unsolicited', label: 'Unsolicited "lucky winner" style opening', icon: 'mail-opened', weight: 10,
+      keywords: ['dear customer','dear beneficiary','dear winner','lucky winner','you have been selected','you were selected'] },
+    { id: 'authority', label: 'Impersonates a bank, government body, or courier', icon: 'building-bank', weight: 8,
+      keywords: ['bank account will be blocked','income tax department','customs department','your parcel','your package','delivery agent','government scheme','subsidy'] },
+    { id: 'shareforward', label: 'Pressures you to share or forward it', icon: 'share', weight: 7,
+      keywords: ['forward this','share this message','forward to','share with your contacts','send to 10 people','send this to everyone'] }
+  ];
+
+  var URL_CHECKS = [
+    { id: 'shortener', label: 'Contains a shortened link that hides the real destination', icon: 'link', weight: 16,
+      test: function (text) { return /\b(bit\.ly|tinyurl\.com|t\.co|goo\.gl|is\.gd|cutt\.ly|rebrand\.ly|ow\.ly)\b/i.test(text); } },
+    { id: 'ipurl', label: 'Link points to a raw IP address instead of a real domain', icon: 'world-exclamation', weight: 20,
+      test: function (text) { return /https?:\/\/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/.test(text); } },
+    { id: 'suspicioustld', label: 'Link uses a domain ending often used by scam sites', icon: 'world-off', weight: 12,
+      test: function (text) { return /\b[a-z0-9-]+\.(xyz|top|info|click|work|support|live|gq|tk|ml)\b/i.test(text); } }
+  ];
+
+  var TOPIC_GUIDES = [
+    { keywords: ['job offer','work from home','part-time job','hiring','recruiter','data entry','interview'], title: 'How to check if a job offer message is a scam', url: 'blog/how-to-check-if-a-job-offer-message-is-a-scam.html' },
+    { keywords: ['lottery','prize','giveaway','lucky draw','you have won',"you've won"], title: 'How to check if a lottery or prize message is fake', url: 'blog/how-to-check-if-a-lottery-or-prize-message-is-fake.html' },
+    { keywords: ['kyc','bank account','net banking','debit card','credit card blocked'], title: 'How to check if a bank message is fake', url: 'blog/how-to-check-if-a-bank-message-is-fake.html' },
+    { keywords: ['parcel','package','delivery','courier','redelivery','shipment'], title: 'How to check if a delivery message is a scam', url: 'blog/how-to-check-if-a-delivery-message-is-a-scam.html' },
+    { keywords: ['loan','instant loan','pre-approved','no credit check','emi'], title: 'How to check if a loan offer message is a scam', url: 'blog/how-to-check-if-a-loan-offer-message-is-a-scam.html' },
+    { keywords: ['customer care','helpline','support number','toll free'], title: 'How to check if a customer care number is fake', url: 'blog/how-to-check-if-a-customer-care-number-is-fake.html' },
+    { keywords: ['discount','sale','order now','off on','shopping','store closing'], title: 'How to check if a shopping website is fake', url: 'blog/how-to-check-if-a-shopping-website-is-fake.html' },
+    { keywords: ['invest','trading','crypto','returns','profit','forex'], title: 'How to check if an investment tip is a scam', url: 'blog/how-to-check-if-an-investment-tip-is-a-scam.html' },
+    { keywords: ['scheme','subsidy','government scheme','yojana'], title: 'How to check if a government scheme message is fake', url: 'blog/how-to-check-if-a-government-scheme-message-is-fake.html' },
+    { keywords: ['love you','miss you','my dear','my love','relationship'], title: 'How to check if a dating profile is fake', url: 'blog/how-to-check-if-a-dating-profile-is-fake.html' },
+    { keywords: ['forwarded many times','whatsapp forward','forward this message'], title: 'How to check if a WhatsApp message is fake', url: 'blog/how-to-check-if-a-whatsapp-message-is-fake.html' }
+  ];
+
+  function analyzeText(raw) {
+    var lower = raw.toLowerCase();
+    var score = 100;
+    var matchedSignals = [];
+
+    SIGNAL_CATEGORIES.forEach(function (cat) {
+      var hit = cat.keywords.some(function (kw) { return lower.indexOf(kw) !== -1; });
+      if (hit) { score -= cat.weight; matchedSignals.push(cat); }
+    });
+    URL_CHECKS.forEach(function (check) {
+      if (check.test(raw)) { score -= check.weight; matchedSignals.push(check); }
+    });
+
+    score = Math.max(3, Math.min(97, score));
+
+    var guide = null;
+    for (var i = 0; i < TOPIC_GUIDES.length; i++) {
+      var g = TOPIC_GUIDES[i];
+      if (g.keywords.some(function (kw) { return lower.indexOf(kw) !== -1; })) { guide = g; break; }
+    }
+
+    return { score: score, signals: matchedSignals, guide: guide };
+  }
+
   function checkNews() {
     var input = document.getElementById('newsInput').value.trim();
     var errorEl = document.getElementById('fieldError');
@@ -721,9 +873,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     var btn = document.getElementById('checkBtn');
     btn.disabled = true;
-    btn.innerHTML = '<i class="ti ti-loader-2 spin"></i> Checking...';
+    btn.innerHTML = '<svg class="icon spin" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9" /></svg> Checking...';
 
-    setTimeout(function () { runCheck(input); btn.disabled = false; btn.innerHTML = '<i class="ti ti-search"></i> Check it now'; }, 400);
+    setTimeout(function () { runCheck(input); btn.disabled = false; btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /> <path d="M21 21l-6 -6" /></svg> Check it now'; }, 400);
   }
 
   function runCheck(input) {
@@ -733,56 +885,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     var label = document.getElementById('resultLabel');
     var score = document.getElementById('resultScore');
     var text = document.getElementById('resultText');
+    var signalsEl = document.getElementById('resultSignals');
     var tips = document.getElementById('resultTips');
+    var guideEl = document.getElementById('resultGuide');
     var bar = document.getElementById('trustBar');
-    var lower = input.toLowerCase();
 
-    var verdict, iconClass, textColor, bgColor, borderColor, iconBg, scoreStyle, desc, trustPct, tipList;
+    var verdict, iconClass, textColor, bgColor, borderColor, iconBg, scoreStyle, desc, trustPct, tipList, signalList;
 
-    var scamWords = ['free money','click here','claim now','share this','forward this','act now','limited time','you have won','congratulations you','wire transfer','send your details','bank account','whatsapp forward'];
-    var fakeWords = ['breaking','shocking','you won\'t believe','mainstream media hiding','they don\'t want you','secret cure','government hiding','100% proven','miracle'];
-    var scamFound = scamWords.some(function(w){ return lower.includes(w); });
-    var fakeFound = fakeWords.some(function(w){ return lower.includes(w); });
-
-    if (scamFound) {
-      verdict = 'SCAM PATTERN DETECTED';
-      iconClass = 'ti-alert-octagon';
-      textColor = '#991B1B'; bgColor = '#FEE2E2'; borderColor = '#FCA5A5'; iconBg = '#FEE2E2';
-      scoreStyle = 'background:#FEE2E2;color:#991B1B;';
-      desc = 'This text contains wording commonly used in scams — urgency, promises of free rewards, or requests to share personal details. Don\'t click any links or share your information.';
-      trustPct = 8;
-      tipList = ['Don\'t click any links','Don\'t share personal info','Warn your contacts','Block the sender'];
-    } else if (fakeFound) {
-      verdict = 'MISINFORMATION PATTERN';
-      iconClass = 'ti-circle-x';
-      textColor = '#92400E'; bgColor = '#FEF3C7'; borderColor = '#FCD34D'; iconBg = '#FEF3C7';
-      scoreStyle = 'background:#FEF3C7;color:#92400E;';
-      desc = 'This text uses sensational or manipulative wording often seen in misleading news. Verify with a trusted news source before sharing.';
-      trustPct = 22;
-      tipList = ['Check an established outlet','Find the original source','Hold off sharing until verified','Search the headline online'];
-    } else if (input.length < 30) {
+    if (input.length < 30) {
       verdict = 'TOO SHORT TO ASSESS';
-      iconClass = 'ti-help-circle';
+      iconClass = 'help-circle';
       textColor = '#1E3A8A'; bgColor = '#EFF6FF'; borderColor = '#BFDBFE'; iconBg = '#EFF6FF';
       scoreStyle = 'background:#EFF6FF;color:#1E3A8A;';
       desc = 'Paste more of the message for a useful read. The more context you give, the more patterns we can check.';
       trustPct = 50;
-      tipList = ['Paste the full message','Include the headline','Add more context'];
+      tipList = ['Paste the full message', 'Include the headline', 'Add more context'];
+      signalList = [];
+      var guide0 = null;
     } else {
-      verdict = 'NO OBVIOUS RED FLAGS';
-      iconClass = 'ti-circle-check';
-      textColor = '#065F46'; bgColor = '#D1FAE5'; borderColor = '#6EE7B7'; iconBg = '#D1FAE5';
-      scoreStyle = 'background:#D1FAE5;color:#065F46;';
-      desc = 'We didn\'t find common scam or fake-news wording here. That\'s not proof it\'s accurate — always verify important claims with a trusted source like Reuters, BBC, or AP News.';
-      trustPct = 70;
-      tipList = ['Still verify important claims','Check the original source','Trusted: Reuters, BBC, AP'];
+      var analysis = analyzeText(input);
+      trustPct = analysis.score;
+      signalList = analysis.signals;
+      var guide0 = analysis.guide;
+
+      if (trustPct < 35) {
+        verdict = 'SCAM PATTERN DETECTED';
+        iconClass = 'alert-octagon';
+        textColor = '#991B1B'; bgColor = '#FEE2E2'; borderColor = '#FCA5A5'; iconBg = '#FEE2E2';
+        scoreStyle = 'background:#FEE2E2;color:#991B1B;';
+        desc = 'This text matches several patterns commonly seen in scams. Don\'t click any links, share personal details, or send money.';
+        tipList = ["Don't click any links", "Don't share personal info", 'Warn your contacts', 'Block the sender'];
+      } else if (trustPct < 65) {
+        verdict = 'MULTIPLE RED FLAGS FOUND';
+        iconClass = 'alert-triangle';
+        textColor = '#92400E'; bgColor = '#FEF3C7'; borderColor = '#FCD34D'; iconBg = '#FEF3C7';
+        scoreStyle = 'background:#FEF3C7;color:#92400E;';
+        desc = 'This text has some wording patterns worth being cautious about. Verify through an official channel before acting on it.';
+        tipList = ['Verify through an official source', "Don't act on urgency alone", 'Check the sender independently'];
+      } else {
+        verdict = 'NO OBVIOUS RED FLAGS';
+        iconClass = 'circle-check';
+        textColor = '#065F46'; bgColor = '#D1FAE5'; borderColor = '#6EE7B7'; iconBg = '#D1FAE5';
+        scoreStyle = 'background:#D1FAE5;color:#065F46;';
+        desc = 'We didn\'t find common scam or fake-news wording patterns here. That\'s not proof it\'s accurate — always verify important claims with a trusted source.';
+        tipList = ['Still verify important claims', 'Check the original source', 'Trusted: Reuters, BBC, AP'];
+      }
     }
 
     result.style.display = 'block';
     result.style.background = bgColor;
     result.style.borderColor = borderColor;
     iconWrap.style.background = iconBg;
-    icon.className = 'ti ' + iconClass;
+    icon.innerHTML = svgIcon(iconClass);
     icon.style.color = textColor;
     label.textContent = verdict;
     label.style.color = textColor;
@@ -790,13 +944,61 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     score.style.cssText = scoreStyle;
     text.textContent = desc;
     bar.style.width = trustPct + '%';
-    bar.style.background = trustPct < 30 ? '#EF4444' : trustPct < 60 ? '#F59E0B' : '#10B981';
+    bar.style.background = trustPct < 35 ? '#EF4444' : trustPct < 65 ? '#F59E0B' : '#10B981';
 
-    tips.innerHTML = tipList.map(function(t){
-      return '<span class="tip-tag"><i class="ti ti-arrow-right"></i>' + t + '</span>';
+    signalsEl.innerHTML = signalList.map(function (s) {
+      return '<div class="signal-item">' + svgIcon(s.icon, 'color:' + textColor + ';') + '<span>' + s.label + '</span></div>';
     }).join('');
 
+    tips.innerHTML = tipList.map(function (t) {
+      return '<span class="tip-tag"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg>' + t + '</span>';
+    }).join('');
+
+    guideEl.innerHTML = guide0
+      ? '<a href="' + guide0.url + '"><svg class="icon" viewBox="0 0 24 24"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" /> <path d="M3 6l0 13" /> <path d="M12 6l0 13" /> <path d="M21 6l0 13" /></svg> Related guide: ' + guide0.title + ' <svg class="icon" viewBox="0 0 24 24"><path d="M5 12l14 0" /> <path d="M13 18l6 -6" /> <path d="M13 6l6 6" /></svg></a>'
+      : '';
+
+    lastResult = { verdict: verdict, trustPct: trustPct };
+
     result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  var lastResult = null;
+
+  var EXAMPLES = {
+    lottery: "CONGRATULATIONS! Your number has been selected in the Lucky Draw Lottery. You have won ₹25,00,000! To claim your prize, pay a small processing fee of ₹499 within 24 hours: bit.ly/claim-prize29. Act now before it expires!",
+    bank: "Dear Customer, your bank account will be BLOCKED today due to pending KYC update. Verify immediately by clicking: bit.ly/kyc-updt29 or your account will be suspended. Share your OTP to confirm.",
+    job: "Congratulations! We saw your profile and you're pre-approved for a work-from-home job, ₹3000/day, no experience needed. Pay ₹999 registration fee to get your starter kit and begin immediately.",
+    safe: "Hey, are we still meeting for lunch tomorrow at 1pm? Let me know if that time still works for you, otherwise we can push it to Wednesday."
+  };
+
+  function loadExample(key) {
+    var input = document.getElementById('newsInput');
+    input.value = EXAMPLES[key];
+    updateCount();
+    checkNews();
+  }
+
+  function shareResult() {
+    if (!lastResult) return;
+    var msg = 'I checked a message on Nofakey.ai \u2014 result: ' + lastResult.verdict +
+      ' (trust score: ' + lastResult.trustPct + '%). Check your own messages free: https://nofakey-ai.github.io/';
+    var btn = document.getElementById('shareBtn');
+
+    if (navigator.share) {
+      navigator.share({ text: msg }).catch(function () {});
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(msg).then(function () {
+        btn.classList.add('copied');
+        btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><path d="M5 12l5 5l10 -10" /></svg> Copied — paste it anywhere';
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><path d="M13 4v4c-6.575 1.028 -9.02 6.788 -10 12c-.037 .206 5.384 -5.962 10 -6v4l8 -7l-8 -7" /></svg> Share this check';
+        }, 2200);
+      });
+    } else {
+      window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+    }
   }
 
   function submitForm() {
