@@ -244,6 +244,18 @@ section { padding: 4rem 1.5rem; }
 .post-meta { font-size: 13px; color: rgba(255,255,255,0.65); display:flex; gap:14px; justify-content:center; flex-wrap:wrap; position: relative; }
 .post-meta span { display:flex; align-items:center; gap:5px; }
 
+.post-banner {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin: 2rem auto 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+}
+
 .post-body { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem; }
 .post-body h2 { font-family:'Syne',sans-serif; font-size: 1.35rem; font-weight: 800; color: var(--gray-900); margin: 2rem 0 0.85rem; }
 .post-body p { font-size: 15.5px; color: var(--gray-700); line-height: 1.85; margin-bottom: 1.1rem; }
