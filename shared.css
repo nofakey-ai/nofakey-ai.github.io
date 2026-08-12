@@ -225,6 +225,10 @@ section { padding: 4rem 1.5rem; }
 .blog-thumb.t3::before { background: #34D399; }
 .blog-thumb.t3::after { background: #10B981; }
 .blog-thumb.t3 .blog-thumb-icon-wrap i { color: #059669; }
+.blog-thumb.t4 { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
+.blog-thumb.t4::before { background: #F59E0B; }
+.blog-thumb.t4::after { background: #D97706; }
+.blog-thumb.t4 .blog-thumb-icon-wrap i { color: #92400E; }
 .blog-body { padding: 1.25rem; }
 .blog-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 6px; }
 .blog-card h3 { font-size: 16px; font-weight: 700; color: var(--gray-900); margin-bottom: 8px; line-height: 1.4; }
