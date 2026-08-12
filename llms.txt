@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a FASTag or Toll Tax Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-fastag-or-toll-tax-message-is-fake.html): A text says your FASTag KYC is incomplete or a toll payment is pending? Here's how to tell a real FASTag message from a scam.
 - [How to Check If an Electricity Bill Disconnection Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-electricity-bill-disconnection-message-is-fake.html): A text threatens to cut your power tonight unless you pay through a link? Here's how to tell a real disconnection notice from a scam.
 - [How to Check If a QR Code Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-qr-code-is-a-scam.html): Scanned a QR code and something feels off? Here's how to tell a real QR code from a scam before you enter any details.
 - [How to Check If a Tech Support Pop-up Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-tech-support-pop-up-is-a-scam.html): A pop-up says your device is infected and gives you a number to call? Here's how to tell a real security warning from a scam.
