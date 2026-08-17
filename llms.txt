@@ -12,6 +12,8 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Report a Scam](https://nofakey-ai.github.io/blog/how-to-report-a-scam.html): What to do immediately after a scam attempt, including how to report cyber fraud in India through the official cybercrime portal and helpline.
+- [What Is Phishing? A Complete Guide](https://nofakey-ai.github.io/blog/what-is-phishing.html): A clear explanation of what phishing actually is, the different forms it takes — email, SMS, calls, QR codes — and how to protect yourself from all of them.
 - [How to Avoid Scams: A Complete Safety Checklist](https://nofakey-ai.github.io/blog/how-to-avoid-scams.html): A practical, memorable set of habits that protect you against nearly every type of scam, from urgency tactics to OTP requests to fake payment links.
 - [Types of Online Scams (and How to Spot Each One)](https://nofakey-ai.github.io/blog/types-of-online-scams.html): A complete overview of the main types of online scams — message impersonation, payment-first tricks, SIM takeovers, fake sites, and more — with links to a detailed guide for each.
 - [How to Check If a Call Forwarding Code Message Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-call-forwarding-code-message-is-a-scam.html): Asked to dial a code starting with * or # to 'fix' your network or unlock a free service? Here's how to tell if it's a call forwarding scam.
