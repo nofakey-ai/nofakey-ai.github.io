@@ -13,6 +13,7 @@
 
 ## Blog posts
 - [How to Check If a WhatsApp Verification Code Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-whatsapp-verification-code-request-is-a-scam.html): A contact asks you to share a 6-digit WhatsApp code they 'accidentally' received? Here's how this account takeover scam works and how to stop it.
+- [What Is a Digital Arrest Scam? How to Protect Yourself](https://nofakey-ai.github.io/blog/what-is-a-digital-arrest-scam.html): A call claims you're under investigation and must stay on the line or face arrest? Here's why 'digital arrest' isn't real, and how to protect yourself.
 - [How to Report a Scam](https://nofakey-ai.github.io/blog/how-to-report-a-scam.html): What to do immediately after a scam attempt, including how to report cyber fraud in India through the official cybercrime portal and helpline.
 - [What Is Phishing? A Complete Guide](https://nofakey-ai.github.io/blog/what-is-phishing.html): A clear explanation of what phishing actually is, the different forms it takes — email, SMS, calls, QR codes — and how to protect yourself from all of them.
 - [How to Avoid Scams: A Complete Safety Checklist](https://nofakey-ai.github.io/blog/how-to-avoid-scams.html): A practical, memorable set of habits that protect you against nearly every type of scam, from urgency tactics to OTP requests to fake payment links.
