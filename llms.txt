@@ -12,6 +12,8 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a Charity Donation Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-charity-donation-request-is-a-scam.html): A donation appeal with an urgent story and a payment link arrived unexpectedly? Here's how to tell a real charity request from a scam.
+- [How to Check If an Insurance Policy Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-insurance-policy-message-is-fake.html): A text claims your insurance policy matured with a bonus, or is about to lapse unless you pay a fee? Here's how to tell if it's real.
 - [How to Check If a WhatsApp Verification Code Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-whatsapp-verification-code-request-is-a-scam.html): A contact asks you to share a 6-digit WhatsApp code they 'accidentally' received? Here's how this account takeover scam works and how to stop it.
 - [What Is a Digital Arrest Scam? How to Protect Yourself](https://nofakey-ai.github.io/blog/what-is-a-digital-arrest-scam.html): A call claims you're under investigation and must stay on the line or face arrest? Here's why 'digital arrest' isn't real, and how to protect yourself.
 - [How to Report a Scam](https://nofakey-ai.github.io/blog/how-to-report-a-scam.html): What to do immediately after a scam attempt, including how to report cyber fraud in India through the official cybercrime portal and helpline.
