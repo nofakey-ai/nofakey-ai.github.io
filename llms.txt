@@ -12,6 +12,8 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If an Aadhaar Update Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-aadhaar-update-message-is-fake.html): A message threatens Aadhaar deactivation unless you update your KYC through a link? Here's how to tell a real Aadhaar message from a scam.
+- [How to Check If an Income Tax Refund Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-income-tax-refund-message-is-fake.html): A text says your tax refund is ready if you 'verify' your bank details right now? Here's how to tell a real refund message from a scam.
 - [How to Check If a Charity Donation Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-charity-donation-request-is-a-scam.html): A donation appeal with an urgent story and a payment link arrived unexpectedly? Here's how to tell a real charity request from a scam.
 - [How to Check If an Insurance Policy Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-insurance-policy-message-is-fake.html): A text claims your insurance policy matured with a bonus, or is about to lapse unless you pay a fee? Here's how to tell if it's real.
 - [How to Check If a WhatsApp Verification Code Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-whatsapp-verification-code-request-is-a-scam.html): A contact asks you to share a 6-digit WhatsApp code they 'accidentally' received? Here's how this account takeover scam works and how to stop it.
