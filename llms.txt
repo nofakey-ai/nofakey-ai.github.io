@@ -12,6 +12,8 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a Remote Access App Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-remote-access-app-request-is-a-scam.html): A support call asks you to install AnyDesk or TeamViewer and share a code? Here's why that's a major red flag, and how this scam actually works.
+- [How to Check If a Traffic Challan Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-traffic-challan-message-is-fake.html): A text demands quick payment of a traffic e-challan or threatens double fine? Here's how to verify a real challan before you pay.
 - [How to Check If a KBC Lottery Winner Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-kbc-lottery-winner-message-is-fake.html): A message claims your number won a KBC lucky draw prize? Here's why that's always fake, and how the real show actually works.
 - [How to Check If an Online Marketplace Deal Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-an-online-marketplace-deal-is-a-scam.html): A great deal on a classifieds site, but the seller won't meet or show the item? Here's how to spot a scam on OLX, Quikr, and similar marketplaces.
 - [How to Check If an Aadhaar Update Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-aadhaar-update-message-is-fake.html): A message threatens Aadhaar deactivation unless you update your KYC through a link? Here's how to tell a real Aadhaar message from a scam.
