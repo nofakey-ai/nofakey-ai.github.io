@@ -12,6 +12,8 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If a SEBI Registered Investment Advisor Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-sebi-registered-investment-advisor-is-fake.html): An advisor claims to be SEBI registered and shows a registration number? Here's how to actually verify that claim before you trust their advice.
+- [How to Check If an IRCTC Refund Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-an-irctc-refund-message-is-fake.html): A text claims your IRCTC train ticket refund is pending and about to expire? Here's how to tell a real refund message from a scam.
 - [How to Check If a Remote Access App Request Is a Scam](https://nofakey-ai.github.io/blog/how-to-check-if-a-remote-access-app-request-is-a-scam.html): A support call asks you to install AnyDesk or TeamViewer and share a code? Here's why that's a major red flag, and how this scam actually works.
 - [How to Check If a Traffic Challan Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-traffic-challan-message-is-fake.html): A text demands quick payment of a traffic e-challan or threatens double fine? Here's how to verify a real challan before you pay.
 - [How to Check If a KBC Lottery Winner Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-kbc-lottery-winner-message-is-fake.html): A message claims your number won a KBC lucky draw prize? Here's why that's always fake, and how the real show actually works.
