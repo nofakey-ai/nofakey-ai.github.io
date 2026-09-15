@@ -13,6 +13,7 @@
 
 ## Blog posts
 - [10 Red Flags in WhatsApp Messages: How to Spot Scams Instantly](https://nofakey-ai.github.io/blog/10-red-flags-in-whatsapp-messages.html): Learn the 10 red flags in WhatsApp messages that reveal scams. Protect yourself from fraud with our expert guide on spotting suspicious messages instantly.
+- [How Scammers Create Urgency: A Breakdown of Psychological Manipulation Tactics](https://nofakey-ai.github.io/blog/how-scammers-create-urgency-breakdown.html): Discover how scammers create urgency to manipulate you. Learn the 8 psychological tactics fraudsters use and how to protect yourself from pressure scams.
 - [How to Check If a PAN Card Update Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-pan-card-update-message-is-fake.html): A message threatens PAN card deactivation unless you update details through a link? Here's how to tell a real PAN message from a scam.
 - [How to Check If a PF Withdrawal Message Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-pf-withdrawal-message-is-fake.html): A text claims your EPFO PF withdrawal is approved and needs to be 'released' through a link? Here's how to tell a real PF message from a scam.
 - [How to Check If a SEBI Registered Investment Advisor Is Fake](https://nofakey-ai.github.io/blog/how-to-check-if-a-sebi-registered-investment-advisor-is-fake.html): An advisor claims to be SEBI registered and shows a registration number? Here's how to actually verify that claim before you trust their advice.
