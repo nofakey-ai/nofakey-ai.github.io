@@ -13,6 +13,7 @@
 
 ## Blog posts
 - [Fake AI Customer Support Chat Scam: Warning Signs & Safety](https://nofakey-ai.github.io/blog/fake-ai-customer-support-chat-scam.html): Is that AI support chat real? Learn how the fake AI customer support chat scam works, the key warning signs, and what to do if you shared details.
+- [Fake Digital Identity Verification Link Scam: Stay Safe](https://nofakey-ai.github.io/blog/fake-digital-identity-verification-link-scam.html): Got a link to 'verify your identity' or update KYC? See how this scam works, how to check a URL, and how to report it in India.
 - [Fake QR Code Verification Scam: How to Spot and Avoid It](https://nofakey-ai.github.io/blog/fake-qr-code-verification-scam.html): Told to scan a QR code to 'verify' or 'receive' money? Learn how fake QR code scams work, what to check before paying, and how to report in India.
 - [Fake UPI Refund Confirmation Scam: How to Spot It](https://nofakey-ai.github.io/blog/fake-upi-refund-confirmation-scam.html): Got a 'refund confirmation' on UPI? Learn how the fake UPI refund scam works, the warning signs, and the steps to report it in India.
 - [WhatsApp Voice Note Verification Scam: How to Spot It](https://nofakey-ai.github.io/blog/whatsapp-voice-note-verification-scam.html): Got a WhatsApp voice note asking for a code or 'verification'? Learn how this scam works, the red flags, and how to verify the sender safely.
