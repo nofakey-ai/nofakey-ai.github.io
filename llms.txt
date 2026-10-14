@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [Fake AI Voice Note Verification Scam: How to Verify Safely](https://nofakey-ai.github.io/blog/fake-ai-voice-note-verification-scam.html): A voice note that sounds like someone you know can be AI-made. See how the scam works, the warning signs, and how to verify safely.
 - [Fake PayNow Refund Scam: How to Spot It in Singapore](https://nofakey-ai.github.io/blog/fake-paynow-refund-scam.html): Got a 'refund' email or SMS asking for your card or OTP? Learn how fake PayNow and IRAS refund scams work and how to report them in Singapore.
 - [Fake HMRC Refund Text Scam: How to Spot It and Report It](https://nofakey-ai.github.io/blog/fake-hmrc-refund-text-scam.html): Got a text saying HMRC owes you a tax refund? See how to spot the scam, check safely on GOV.UK, and report it to 60599.
 - [Fake Interac e-Transfer Email Scam: How to Spot It Safely](https://nofakey-ai.github.io/blog/fake-interac-etransfer-email-scam.html): Unexpected Interac e-Transfer email? See the warning signs, how to verify a transfer without clicking, and what to do if you were scammed.
