@@ -231,6 +231,23 @@ def update_sitemap_xml(posts):
     write(os.path.join(ROOT, "sitemap.xml"), xml)
 
 
+# Google Tag Manager snippets for the generated sitemap.html page.
+# Kept as plain strings (not inside the f-string) so the JavaScript braces
+# don't need to be escaped.
+GTM_HEAD = """<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJZ2J9TS');</script>
+<!-- End Google Tag Manager -->"""
+
+GTM_BODY = """<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJZ2J9TS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->"""
+
+
 def update_sitemap_html(posts):
     post_items = "\n".join(
         f'          <li><a href="{p["file"]}">{p["title"]}</a> <span class="sm-date">{p["date"][:10]}</span></li>'
@@ -240,13 +257,14 @@ def update_sitemap_html(posts):
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GTM_HEAD}
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sitemap | Nofakey.ai</title>
   <meta name="description" content="A full, human-readable list of every page on Nofakey.ai."/>
   <link rel="canonical" href="{SITE_URL}/sitemap.html"/>
   <meta name="robots" content="index, follow"/>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
@@ -263,6 +281,7 @@ def update_sitemap_html(posts):
   </style>
 </head>
 <body>
+{GTM_BODY}
 
 <nav>
   <a href="index.html" class="logo">
@@ -394,4 +413,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
