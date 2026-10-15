@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [Fake AI Identity Reverification Scam: How to Spot It Safely](https://nofakey-ai.github.io/blog/fake-ai-identity-reverification-scam.html): Told to re-verify your identity with an AI platform, bank or app? See the fake link tricks, warning signs and what to do if your ID is exposed.
 - [Fake AI Subscription Cancellation Scam: How to Cancel Safely](https://nofakey-ai.github.io/blog/fake-ai-subscription-cancellation-scam.html): Fake AI subscription renewal, billing and cancellation emails steal logins and card details. Learn the warning signs and how to cancel safely.
 - [Fake AI Agent Payment Scam: How to Verify Before You Approve](https://nofakey-ai.github.io/blog/fake-ai-agent-payment-scam.html): Fake AI payment assistants, hijacked shopping agents and tricked approvals: how these scams work and how to verify before you pay.
 - [Fake AI Voice Note Verification Scam: How to Verify Safely](https://nofakey-ai.github.io/blog/fake-ai-voice-note-verification-scam.html): A voice note that sounds like someone you know can be AI-made. See how the scam works, the warning signs, and how to verify safely.
