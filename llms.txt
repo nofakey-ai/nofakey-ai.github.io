@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [Fake Student Loan Forgiveness Letter Scam: How to Spot It](https://nofakey-ai.github.io/blog/fake-student-loan-forgiveness-letter-scam.html): Got a letter saying your student loans are approved for forgiveness? See the scam signs, how to verify it, and where to report in the U.S.
 - [Fake AI Browser Extension Update Scam: How to Stay Safe](https://nofakey-ai.github.io/blog/fake-ai-browser-extension-update-scam.html): Fake 'update your AI extension' alerts and copycat AI add-ons steal logins and chats. Learn the warning signs, safe updates and cleanup steps.
 - [Fake Video KYC Rescheduling Scam: How to Spot It](https://nofakey-ai.github.io/blog/fake-video-kyc-rescheduling-scam.html): Got a message to reschedule your video KYC? See how the fake rescheduling scam steals OTPs and money, and how to confirm with your bank safely.
 - [Fake AI Identity Reverification Scam: How to Spot It Safely](https://nofakey-ai.github.io/blog/fake-ai-identity-reverification-scam.html): Told to re-verify your identity with an AI platform, bank or app? See the fake link tricks, warning signs and what to do if your ID is exposed.
