@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [AI Detector for Publishers and Editors: A Responsible Guide](https://nofakey-ai.github.io/blog/ai-detector-for-publishers-and-editors.html): Using an AI detector as a publisher or editor? Learn what to look for, how to build a fair review workflow, and why a score should never decide alone.
 - [AI Watermark Detection: How It Works and Its Limits](https://nofakey-ai.github.io/blog/ai-watermark-detection-how-it-works.html): AI watermark detection explained: how hidden signals are added to text, images, audio and video, how detectors read them, and why results are not proof.
 - [Are AI Detectors Accurate? What They Get Wrong](https://nofakey-ai.github.io/blog/are-ai-detectors-accurate.html): Are AI detectors accurate? Learn how they work, why they give false positives and misses, and how to use their scores responsibly.
 - [Does Google Penalize AI-Generated Content? The Real Answer](https://nofakey-ai.github.io/blog/does-google-penalize-ai-generated-content.html): Does Google penalize AI-generated content? Learn what Google actually targets, why quality matters more than the tool, and how to publish AI-assisted content safely.
