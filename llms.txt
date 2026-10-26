@@ -13,6 +13,7 @@
 
 ## Blog posts
 - [AI Watermark Detection: How It Works and Its Limits](https://nofakey-ai.github.io/blog/ai-watermark-detection-how-it-works.html): AI watermark detection explained: how hidden signals are added to text, images, audio and video, how detectors read them, and why results are not proof.
+- [Are AI Detectors Accurate? What They Get Wrong](https://nofakey-ai.github.io/blog/are-ai-detectors-accurate.html): Are AI detectors accurate? Learn how they work, why they give false positives and misses, and how to use their scores responsibly.
 - [How to Label AI-Generated Content: Practical Guide](https://nofakey-ai.github.io/blog/how-to-label-ai-generated-content.html): Learn how to label AI-generated content clearly. Steps for images, video, audio and text, platform disclosure settings and copy-ready examples.
 - [What Is a Deepfake and How to Protect Yourself](https://nofakey-ai.github.io/blog/what-is-a-deepfake-and-how-to-protect-yourself.html): What is a deepfake? Learn how deepfakes work, the warning signs, how to verify a suspicious call or video, and what to do if you are targeted.
 - [How to Check If an Article Is Written by AI](https://nofakey-ai.github.io/blog/how-to-check-if-an-article-is-written-by-ai.html): Wondering how to check if an article is written by AI? Learn which clues are weak, which checks are strong, and how to verify an article fairly.
