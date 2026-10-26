@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Check If an Article Is Written by AI](https://nofakey-ai.github.io/blog/how-to-check-if-an-article-is-written-by-ai.html): Wondering how to check if an article is written by AI? Learn which clues are weak, which checks are strong, and how to verify an article fairly.
 - [AI Generated Fake News Checker Free: How to Check a Story Yourself](https://nofakey-ai.github.io/blog/ai-generated-fake-news-checker-free.html): Looking for a free AI-generated fake news checker? See what tools can and can't do, plus a six-step method to verify a story, image or headline.
 - [Free AI Content Detector for Blog Posts: What It Can and Can't Tell You](https://nofakey-ai.github.io/blog/free-ai-content-detector-for-blog-posts.html): Free AI content detectors for blog posts can't prove who wrote a draft. See their limits, how to test one, and better checks for your blog.
 - [Fake College Financial Aid Refund Check Scam: Why It Bounces](https://nofakey-ai.github.io/blog/fake-college-financial-aid-refund-check-scam.html): School sent you a refund check and asked you to send some back? Learn how fake checks look real, then bounce, and what to do if you deposited one.
