@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJZ2J9TS');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Detection for Journalists: How to Verify Images | Nofakey.ai</title>
+  <meta name="description" content="How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system."/>
+  <link rel="canonical" href="https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+  <link rel="alternate" type="application/rss+xml" title="Nofakey.ai Blog" href="../rss.xml"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Nofakey.ai"/>
+  <meta property="og:title" content="AI Detection for Journalists: How to Verify Images"/>
+  <meta property="og:description" content="How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system."/>
+  <meta property="og:url" content="https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html"/>
+  <meta property="og:image" content="https://nofakey-ai.github.io/images/ai-detection-for-journalists-verify-images.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="675"/>
+  <meta property="article:section" content="Guide"/>
+  <meta property="article:published_time" content="2026-10-26"/>
+  <meta name="thumb-theme" content="t3"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="AI Detection for Journalists: How to Verify Images"/>
+  <meta name="twitter:description" content="How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system."/>
+  <meta name="twitter:image" content="https://nofakey-ai.github.io/images/ai-detection-for-journalists-verify-images.jpg"/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"AI Detection for Journalists: How to Verify Images","description":"How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system.","author":{"@type":"Organization","name":"Nofakey.ai"},"publisher":{"@type":"Organization","name":"Nofakey.ai","logo":{"@type":"ImageObject","url":"https://nofakey-ai.github.io/favicon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html"},"image":"https://nofakey-ai.github.io/images/ai-detection-for-journalists-verify-images.jpg","inLanguage":"en","datePublished":"2026-10-26","dateModified":"2026-10-26"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nofakey-ai.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://nofakey-ai.github.io/blog.html"},{"@type":"ListItem","position":3,"name":"AI Detection for Journalists: How to Verify Images","item":"https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Can journalists rely on AI image detectors?","acceptedAnswer":{"@type":"Answer","text":"Not on their own. Detectors give a probability, can be wrong either way, and may miss edited or recompressed images. Use them as one signal alongside source tracing, reverse image search and context checks."}},
+  {"@type":"Question","name":"What is the first step to verify a suspicious image?","acceptedAnswer":{"@type":"Answer","text":"Trace the source. Find the earliest known appearance, who posted it, and whether the photographer or original account can be contacted."}},
+  {"@type":"Question","name":"Is a missing metadata a sign an image is fake?","acceptedAnswer":{"@type":"Answer","text":"No. Social platforms and messaging apps often strip metadata from real photos. Missing metadata is not proof of anything, and present metadata can be edited."}},
+  {"@type":"Question","name":"Are old photos reused as new events more common than AI fakes?","acceptedAnswer":{"@type":"Answer","text":"Real images shown with false context are a long-standing problem, so check date, place and earlier use as well as whether an image is synthetic."}},
+  {"@type":"Question","name":"How should a newsroom label an image it cannot verify?","acceptedAnswer":{"@type":"Answer","text":"Avoid absolute claims. Mark it unverified, explain what was checked, and do not publish it as documentary evidence until multiple independent signals agree."}}]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="../shared.css"/>
+
+  <style>
+    .read-progress{position:fixed;top:0;left:0;height:3px;width:0;background:#e0492f;z-index:9999}
+    .post-hero{margin:0 0 28px;text-align:center}
+    .post-hero img{display:block;width:100%;max-width:760px;height:auto;margin:0 auto;border-radius:14px}
+    .post-hero figcaption{font-size:.85rem;opacity:.75;margin:8px auto 0;max-width:620px}
+    .post-toc{border:1px solid rgba(128,128,128,.3);border-radius:12px;padding:16px 20px;margin:24px 0}
+    .post-toc summary{cursor:pointer;font-weight:600}
+    .post-toc ol{margin:12px 0 0;padding-left:20px;line-height:1.8}
+    .post-toc a{text-decoration:none}
+    .post-toc a:hover{text-decoration:underline}
+    .post-body h2{scroll-margin-top:90px}
+    .post-body ol.steps{padding-left:22px;line-height:1.75}
+    .post-body ol.steps li{margin-bottom:12px}
+    .post-body details.faq{border-bottom:1px solid rgba(128,128,128,.25);padding:12px 0}
+    .post-body details.faq summary{cursor:pointer;font-weight:600;font-size:1.02rem}
+    .post-body details.faq p{margin:10px 0 0}
+    .post-body .cmp{overflow-x:auto;margin:18px 0}
+    .post-body .cmp table{width:100%;border-collapse:collapse;min-width:520px}
+    .post-body .cmp th,.post-body .cmp td{border:1px solid rgba(128,128,128,.3);padding:10px 12px;text-align:left;vertical-align:top;font-size:.95rem}
+    .post-body .cmp th{background:rgba(128,128,128,.12)}
+    .back-top{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;background:#e0492f;color:#fff;font-size:1.2rem;display:none;z-index:900}
+    .back-top.show{display:block}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+    @media (max-width:600px){.post-toc{padding:14px}.post-body .cmp th,.post-body .cmp td{padding:8px}}
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJZ2J9TS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="read-progress" id="readProgress" aria-hidden="true"></div>
+
+<nav aria-label="Main">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+    <span class="logo-text">Nofakey<span>.ai</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">How it works</a></li>
+    <li><a href="../blog.html" aria-current="page">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <a href="../index.html#checker" class="nav-cta">Check now — free</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#how">How it works</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<main>
+<header class="post-header">
+  <div class="blog-tag">Guide</div>
+  <h1>AI Detection for Journalists: How to Verify Images Under Deadline</h1>
+  <div class="post-meta">
+    <span><i class="ti ti-calendar"></i> <time datetime="2026-10-26">26 October 2026</time></span>
+    <span><i class="ti ti-clock"></i> 9 min read</span>
+    <span><i class="ti ti-camera-check"></i> Newsroom verification</span>
+  </div>
+</header>
+
+<article class="post-body">
+  <figure class="post-hero">
+    <picture>
+      <source srcset="../images/ai-detection-for-journalists-verify-images.webp" type="image/webp"/>
+      <img src="../images/ai-detection-for-journalists-verify-images.jpg" width="1200" height="675" alt="An image under a magnifying glass with three confidence labels, likely real, likely synthetic and unverified, beside four steps: trace the source, reverse image search, check metadata and context, and label your confidence" fetchpriority="high"/>
+    </picture>
+    <figcaption>Illustration only.</figcaption>
+  </figure>
+
+  <p>A dramatic photo is spreading from a breaking news scene. Readers are sharing it, and your editor wants to know: is it real? AI image detectors promise a fast answer, but for journalists, speed without certainty can be costly. This guide shows how to use AI detection as one signal inside a proper image verification workflow.</p>
+
+  <div class="post-quickanswer">
+    <span class="qa-label"><i class="ti ti-bolt"></i> Quick answer</span>
+    To verify an image, <strong>start with the source, not the pixels</strong>: trace where it first appeared, run a reverse image search, check context and metadata, and use an AI detector only as one signal. Then label your confidence honestly: likely real, likely synthetic, or unverified. Do not publish an unverified image as documentary evidence.
+  </div>
+
+  <div class="post-toc" role="navigation" aria-label="Table of contents">
+    <details open><summary>In this guide</summary><ol id="tocList"></ol></details>
+  </div>
+
+  <h2 id="shift">Why detection alone is not enough for journalists</h2>
+  <p>Visual clues that once exposed AI images, such as malformed hands, are fading as tools improve. A journalist trained on old tells can wrongly clear a convincing fake because it passes outdated tests. Detectors have their own limits: they return probabilities, can miss edited or recompressed images, and can wrongly flag real photos. See <a href="../blog/are-ai-detectors-accurate.html">are AI detectors accurate?</a> for the wider picture.</p>
+  <p>There is another trap. Many misleading images are <em>real</em> photos shown with the wrong date, place or story. A detector that says "not AI" tells you nothing about whether the caption is true. Verification has to cover both questions: <strong>Is the image authentic, and is its claimed context true?</strong></p>
+
+  <h2 id="types">Know what you are checking for</h2>
+  <div class="cmp"><table>
+    <thead><tr><th>Type</th><th>What it is</th><th>Main check</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Fully AI-generated</strong></td><td>Created from a prompt, with no camera involved</td><td>No original source or photographer; provenance checks fail</td></tr>
+      <tr><td><strong>AI-edited</strong></td><td>A real photo with parts added, removed or changed</td><td>Compare with earlier versions and other angles</td></tr>
+      <tr><td><strong>Out of context</strong></td><td>A real, unaltered photo with a false date, place or story</td><td>Reverse image search and geolocation</td></tr>
+      <tr><td><strong>Traditional manipulation</strong></td><td>Photo editing, splicing or cropping</td><td>Forensic inspection and source comparison</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="workflow">A step-by-step image verification workflow</h2>
+  <ol class="steps">
+    <li><strong>Trace the source.</strong> Who posted it first? Find the earliest known appearance, and check whether the account has a history, a real identity and a link to the event.</li>
+    <li><strong>Run a reverse image search.</strong> Look for earlier uses of the same image, or near-identical versions, which can expose recycled or altered photos.</li>
+    <li><strong>Contact the source.</strong> Ask the photographer or poster for the original file, other frames from the same moment, and how and where it was taken.</li>
+    <li><strong>Check metadata and content credentials.</strong> Look at embedded data and any provenance information. Remember that it is often stripped by platforms and can be edited, so it can support a conclusion but never settle one.</li>
+    <li><strong>Test the context.</strong> Does the location, weather, shadows, signs, clothing, vehicles and language match the claimed place and time? Can you find other images of the same scene from other sources?</li>
+    <li><strong>Inspect the image closely.</strong> Zoom in on text, reflections, repeated textures, edges and backgrounds. Treat oddities as reasons to dig further, not as proof.</li>
+    <li><strong>Use an AI detector as one signal.</strong> Note the result and its confidence, run it on the best-quality version you have, and record that it is not a verdict.</li>
+    <li><strong>Consult a colleague or specialist.</strong> A second pair of eyes catches mistakes, especially under deadline pressure.</li>
+    <li><strong>Label your confidence and document it.</strong> Record what you checked and what you found.</li>
+  </ol>
+
+  <h2 id="metadata">What metadata and content credentials can and cannot tell you</h2>
+  <ul>
+    <li><strong>Present metadata</strong> may show device, date or editing software, but it can be changed or faked.</li>
+    <li><strong>Missing metadata</strong> is normal. Social platforms and messaging apps often remove it from genuine photos.</li>
+    <li><strong>Content credentials</strong> are records of how a file was made. A valid record is useful evidence, but their absence proves nothing.</li>
+    <li><strong>Hidden watermarks</strong> may exist in some AI output but only a matching detector can read them. Our guide to <a href="../blog/ai-watermark-detection-how-it-works.html">AI watermark detection</a> explains the limits.</li>
+  </ul>
+
+  <h2 id="detector">How to use an AI image detector responsibly</h2>
+  <ul>
+    <li><strong>Treat the output as one signal,</strong> never as an editorial judgment.</li>
+    <li><strong>Use the best available file.</strong> Screenshots and heavy compression reduce reliability.</li>
+    <li><strong>Try more than one method,</strong> and note when results disagree.</li>
+    <li><strong>Protect sources and embargoed material.</strong> Check how a tool stores uploaded images before using it on sensitive files.</li>
+    <li><strong>Never report "AI" or "real" on a detector result alone.</strong> Say what evidence supports your conclusion.</li>
+  </ul>
+
+  <h2 id="labels">Use clear confidence labels</h2>
+  <div class="cmp"><table>
+    <thead><tr><th>Label</th><th>When to use it</th><th>What to do</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Likely real</strong></td><td>Several independent signals agree: traceable source, matching context, corroborating images</td><td>Publish with a clear credit and caption</td></tr>
+      <tr><td><strong>Likely synthetic</strong></td><td>No credible source, context fails, and signals point to AI generation</td><td>Do not publish as fact. Consider a debunk</td></tr>
+      <tr><td><strong>Unverified</strong></td><td>Signals are mixed, missing or contradictory</td><td>Hold it, keep checking, and avoid absolute claims</td></tr>
+    </tbody>
+  </table></div>
+  <div class="post-callout"><strong>Simple rule:</strong> if you cannot verify an image through several independent signals, do not present it as documentary evidence. "Unverified" is an acceptable answer.</div>
+
+  <h2 id="breaking">Verifying during breaking news</h2>
+  <ul>
+    <li><strong>Expect the most fakes at the most urgent moments.</strong> Disasters, conflicts and elections attract fabricated visuals.</li>
+    <li><strong>Look for multiple sources.</strong> Real events usually produce many images and videos from different angles.</li>
+    <li><strong>Be wary of "too perfect" images,</strong> and of images that appear with no photographer, no location and no witness.</li>
+    <li><strong>Slow down the share button.</strong> A short delay to verify protects your outlet's credibility.</li>
+    <li><strong>Have a standard process</strong> everyone knows, so verification does not depend on one expert.</li>
+  </ul>
+
+  <h2 id="video">What about video and audio?</h2>
+  <p>The same principles apply: trace the source, check context, and look for corroboration. Faces and voices can be faked convincingly, so verify the person and the claim, not just the footage. Our guide on <a href="../blog/what-is-a-deepfake-and-how-to-protect-yourself.html">what a deepfake is and how to protect yourself</a> covers practical checks.</p>
+
+  <h2 id="transparency">Be transparent with your audience</h2>
+  <ul>
+    <li><strong>Label AI-generated illustrations clearly,</strong> and never present them as photographs. See <a href="../blog/how-to-label-ai-generated-content.html">how to label AI-generated content</a>.</li>
+    <li><strong>Explain what you checked</strong> when you debunk or confirm an image.</li>
+    <li><strong>Correct quickly and visibly</strong> if you get it wrong.</li>
+    <li><strong>Publish an AI policy</strong> that covers images, as well as text. Editors can read our guide on <a href="../blog/ai-detector-for-publishers-and-editors.html">AI detectors for publishers and editors</a>.</li>
+  </ul>
+
+  <h2 id="conclusion">Conclusion</h2>
+  <p>For journalists, AI detection is a helpful signal but a poor judge. The reliable path is a documented workflow: trace the source, reverse search, check context and metadata, use a detector as one input, and label your confidence honestly. When in doubt, call it unverified and keep checking. For a quick first read on a suspicious claim or message, paste it into our <a href="../index.html#checker">free checker</a>, and find more guides on the <a href="../blog.html">Nofakey.ai blog</a>.</p>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <details class="faq"><summary>Can journalists rely on AI image detectors?</summary><p>Not on their own. Detectors give a probability, can be wrong either way, and may miss edited or recompressed images. Use them as one signal alongside source tracing, reverse image search and context checks.</p></details>
+  <details class="faq"><summary>What is the first step to verify a suspicious image?</summary><p>Trace the source. Find the earliest known appearance, who posted it, and whether the photographer or original account can be contacted.</p></details>
+  <details class="faq"><summary>Is missing metadata a sign an image is fake?</summary><p>No. Social platforms and messaging apps often strip metadata from real photos. Missing metadata is not proof of anything, and present metadata can be edited.</p></details>
+  <details class="faq"><summary>Are old photos reused as new events more common than AI fakes?</summary><p>Real images shown with false context are a long-standing problem, so check date, place and earlier use as well as whether an image is synthetic.</p></details>
+  <details class="faq"><summary>How should a newsroom label an image it cannot verify?</summary><p>Avoid absolute claims. Mark it unverified, explain what was checked, and do not publish it as documentary evidence until multiple independent signals agree.</p></details>
+
+  <div class="post-cta">
+    <p>Want a quick first read on a claim or message?</p>
+    <a class="btn" href="../index.html#checker"><i class="ti ti-search"></i> Run it through the checker</a>
+  </div>
+</article>
+</main>
+
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="ti ti-arrow-up"></i></button>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-icon"><i class="ti ti-shield-check"></i></div><span class="logo-text">Nofakey<span>.ai</span></span></div>
+      <p>A quick first-pass check for fake news and scams.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="../index.html#checker">Check now</a></li>
+        <li><a href="../index.html#how">How it works</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../sitemap.html">Sitemap</a></li>
+        <li><a href="../rss.xml">RSS Feed</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../privacy.html">Privacy policy</a></li>
+        <li><a href="../terms.html">Terms of use</a></li>
+        <li><a href="../cookies.html">Cookie policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:nofakey.ai@outlook.com">nofakey.ai@outlook.com</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nofakey.ai — All rights reserved</p>
+    <div class="social-links">
+      <a href="https://x.com/nofakey_ai" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="ti ti-brand-x"></i></a>
+      <a href="https://www.instagram.com/nofakey.ai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61592580771401" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/nofakey-ai/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.threads.com/@nofakey.ai" target="_blank" rel="noopener" aria-label="Threads"><i class="ti ti-brand-threads"></i></a>
+      <a href="https://bsky.app/profile/nofakeyai.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="ti ti-brand-bluesky"></i></a>
+      <a href="https://mastodon.social/@nofakeyai" target="_blank" rel="noopener" aria-label="Mastodon"><i class="ti ti-brand-mastodon"></i></a>
+      <a href="https://in.pinterest.com/nofakeyai/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="ti ti-brand-pinterest"></i></a>
+      <a href="https://www.tumblr.com/blog/nofakeyai" target="_blank" rel="noopener" aria-label="Tumblr"><i class="ti ti-brand-tumblr"></i></a>
+      <a href="https://github.com/nofakey-ai" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+      <a href="https://www.youtube.com/@nofakeyai" target="_blank" rel="noopener" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared.js"></script>
+<script>
+(function () {
+  var list = document.getElementById('tocList');
+  document.querySelectorAll('.post-body h2[id]').forEach(function (h) {
+    var li = document.createElement('li'), a = document.createElement('a');
+    a.href = '#' + h.id; a.textContent = h.textContent; li.appendChild(a); list.appendChild(li);
+  });
+  var bar = document.getElementById('readProgress'), top = document.getElementById('backTop');
+  function onScroll() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    top.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  top.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+  onScroll();
+})();
+</script>
+</body>
+</html>
