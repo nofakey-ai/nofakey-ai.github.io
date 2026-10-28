@@ -5,7 +5,21 @@
     <link>https://nofakey-ai.github.io/blog.html</link>
     <description>Guides on spotting fake news, scams, and misinformation before you share them.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 08:01:12 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 08:09:07 +0000</lastBuildDate>
+    <item>
+      <title>AI Content Audit for SEO Agencies: A Practical Framework</title>
+      <link>https://nofakey-ai.github.io/blog/ai-content-audit-for-seo-agencies.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-content-audit-for-seo-agencies.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How SEO agencies can run an AI content audit: inventory AI use, score quality and accuracy, check sources and disclosure, triage pages and report to clients.]]></description>
+    </item>
+    <item>
+      <title>AI Content Detection API for Developers: Integrate It Responsibly</title>
+      <link>https://nofakey-ai.github.io/blog/ai-content-detection-api-for-developers.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-content-detection-api-for-developers.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Integrating an AI content detection API? Learn how to evaluate one, design score handling, protect user data, avoid false-positive harm and monitor drift.]]></description>
+    </item>
     <item>
       <title>AI Detection for Journalists: How to Verify Images</title>
       <link>https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html</link>
@@ -47,6 +61,20 @@
       <guid>https://nofakey-ai.github.io/blog/are-ai-detectors-accurate.html</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[Are AI detectors accurate? Learn how they work, why they give false positives and misses, and how to use their scores responsibly.]]></description>
+    </item>
+    <item>
+      <title>Bulk AI Content Checker for Agencies: How to Choose and Use One</title>
+      <link>https://nofakey-ai.github.io/blog/bulk-ai-content-checker-for-agencies.html</link>
+      <guid>https://nofakey-ai.github.io/blog/bulk-ai-content-checker-for-agencies.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Choosing a bulk AI content checker for your agency? Learn what to test, what bulk scans can and cannot tell you, and a safe workflow for client content.]]></description>
+    </item>
+    <item>
+      <title>How to Detect AI-Generated Product Reviews in Ecommerce</title>
+      <link>https://nofakey-ai.github.io/blog/detect-ai-generated-product-reviews-ecommerce.html</link>
+      <guid>https://nofakey-ai.github.io/blog/detect-ai-generated-product-reviews-ecommerce.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How to detect AI-generated product reviews: red flags for shoppers, behavioural signals for stores, why text detectors struggle, and a fair moderation workflow.]]></description>
     </item>
     <item>
       <title>Does Google Penalize AI-Generated Content? The Real Answer</title>
