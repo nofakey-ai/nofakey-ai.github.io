@@ -5,7 +5,7 @@
     <link>https://nofakey-ai.github.io/blog.html</link>
     <description>Guides on spotting fake news, scams, and misinformation before you share them.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 07:59:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 08:01:12 +0000</lastBuildDate>
     <item>
       <title>AI Detection for Journalists: How to Verify Images</title>
       <link>https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html</link>
@@ -19,6 +19,13 @@
       <guid>https://nofakey-ai.github.io/blog/ai-detector-for-publishers-and-editors.html</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[Using an AI detector as a publisher or editor? Learn what to look for, how to build a fair review workflow, and why a score should never decide alone.]]></description>
+    </item>
+    <item>
+      <title>AI Detector Policy for Universities: A Practical Framework</title>
+      <link>https://nofakey-ai.github.io/blog/ai-detector-policy-for-universities.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-detector-policy-for-universities.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How universities can write a fair AI detector policy: allowed AI use, rules for detector scores, due process, appeals, equity and data protection, with sample clauses.]]></description>
     </item>
     <item>
       <title>AI-Generated Research Paper Detection: What Works and What Doesn’t</title>
