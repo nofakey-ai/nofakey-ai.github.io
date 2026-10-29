@@ -5,7 +5,7 @@
     <link>https://nofakey-ai.github.io/blog.html</link>
     <description>Guides on spotting fake news, scams, and misinformation before you share them.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 08:09:07 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Oct 2026 07:47:59 +0000</lastBuildDate>
     <item>
       <title>AI Content Audit for SEO Agencies: A Practical Framework</title>
       <link>https://nofakey-ai.github.io/blog/ai-content-audit-for-seo-agencies.html</link>
@@ -26,6 +26,13 @@
       <guid>https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system.]]></description>
+    </item>
+    <item>
+      <title>AI Detection Tool for HR Teams: Use It Fairly and Safely</title>
+      <link>https://nofakey-ai.github.io/blog/ai-detection-tool-for-hr-teams.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-detection-tool-for-hr-teams.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How HR teams can use an AI detection tool fairly: screening resumes and assessments, spotting deepfake candidates, avoiding bias, and protecting candidate data.]]></description>
     </item>
     <item>
       <title>AI Detector for Publishers and Editors: A Responsible Guide</title>
@@ -49,6 +56,13 @@
       <description><![CDATA[How AI-generated research paper detection works, why scores alone fail, and the stronger integrity checks reviewers, editors and supervisors should use.]]></description>
     </item>
     <item>
+      <title>AI-Generated Resume Detector for Recruiters: What Works and What Doesn’t</title>
+      <link>https://nofakey-ai.github.io/blog/ai-generated-resume-detector-for-recruiters.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-generated-resume-detector-for-recruiters.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Do AI resume detectors work? Learn why they struggle on resumes, the signs recruiters can check, how to verify claims, and a fair screening process.]]></description>
+    </item>
+    <item>
       <title>AI Watermark Detection: How It Works and Its Limits</title>
       <link>https://nofakey-ai.github.io/blog/ai-watermark-detection-how-it-works.html</link>
       <guid>https://nofakey-ai.github.io/blog/ai-watermark-detection-how-it-works.html</guid>
@@ -61,6 +75,13 @@
       <guid>https://nofakey-ai.github.io/blog/are-ai-detectors-accurate.html</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[Are AI detectors accurate? Learn how they work, why they give false positives and misses, and how to use their scores responsibly.]]></description>
+    </item>
+    <item>
+      <title>Brand Protection Against Deepfake Impersonation: A Practical Playbook</title>
+      <link>https://nofakey-ai.github.io/blog/brand-protection-against-deepfake-impersonation.html</link>
+      <guid>https://nofakey-ai.github.io/blog/brand-protection-against-deepfake-impersonation.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How to protect your brand against deepfake impersonation: threat map, prevention steps, monitoring, a response runbook, vendor questions and a 90-day plan.]]></description>
     </item>
     <item>
       <title>Bulk AI Content Checker for Agencies: How to Choose and Use One</title>
@@ -82,6 +103,13 @@
       <guid>https://nofakey-ai.github.io/blog/does-google-penalize-ai-generated-content.html</guid>
       <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
       <description><![CDATA[Does Google penalize AI-generated content? Learn what Google actually targets, why quality matters more than the tool, and how to publish AI-assisted content safely.]]></description>
+    </item>
+    <item>
+      <title>How to Detect AI-Generated Cover Letters (and What to Do Next)</title>
+      <link>https://nofakey-ai.github.io/blog/how-to-detect-ai-generated-cover-letters.html</link>
+      <guid>https://nofakey-ai.github.io/blog/how-to-detect-ai-generated-cover-letters.html</guid>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[How to detect AI-generated cover letters: signs to look for, why detectors are unreliable, follow-up questions that work, and fair steps for hiring teams and applicants.]]></description>
     </item>
     <item>
       <title>How to Label AI-Generated Content: Practical Guide</title>
