@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [How to Know If a Video Is AI Generated: 9 Signs and Checks](https://nofakey-ai.github.io/blog/how-to-know-if-a-video-is-ai-generated.html): Wondering how to know if a video is AI generated? Learn the visual and audio signs, quick ways to verify the source, and why detectors alone can’t settle it.
 - [AI Content Audit for SEO Agencies: A Practical Framework](https://nofakey-ai.github.io/blog/ai-content-audit-for-seo-agencies.html): How SEO agencies can run an AI content audit: inventory AI use, score quality and accuracy, check sources and disclosure, triage pages and report to clients.
 - [AI Content Detection API for Developers: Integrate It Responsibly](https://nofakey-ai.github.io/blog/ai-content-detection-api-for-developers.html): Integrating an AI content detection API? Learn how to evaluate one, design score handling, protect user data, avoid false-positive harm and monitor drift.
 - [AI Detection for Journalists: How to Verify Images](https://nofakey-ai.github.io/blog/ai-detection-for-journalists-verify-images.html): How journalists can verify images when AI detection is unreliable: source tracing, reverse search, metadata, context checks and a clear confidence labeling system.
