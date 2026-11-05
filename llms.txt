@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [ChatGPT Text Detector for Students (Free): What to Know Before You Use One](https://nofakey-ai.github.io/blog/chatgpt-text-detector-for-students-free.html): Using a free ChatGPT text detector as a student? Learn what scores mean, why honest writers get flagged, how to protect your work, and what to do if you are accused.
 - [AI-Generated Profile Picture Checker: How to Spot a Fake Profile](https://nofakey-ai.github.io/blog/ai-generated-profile-picture-checker.html): Looking for an AI-generated profile picture checker? See the face clues to look for, simple checks that expose fake accounts, and why no checker is the final word.
 - [AI Voice Clone Scam: How to Detect It and What to Do](https://nofakey-ai.github.io/blog/ai-voice-clone-scam-how-to-detect.html): Got a call that sounds like a loved one asking for money? Learn how an AI voice clone scam works, how to detect it in the moment, and what to do if you already paid.
 - [Deepfake Audio Detector Free: What It Can and Can’t Tell You](https://nofakey-ai.github.io/blog/deepfake-audio-detector-free.html): Looking for a free deepfake audio detector? See what free tools can and can’t do, the audio red flags to listen for, and the call-back habits that protect you from voice-clone scams.
