@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [AI Detector False Positives for Non-Native English Writers: What to Do](https://nofakey-ai.github.io/blog/ai-detector-non-native-english-writers-false-positive.html): AI detectors can wrongly flag non-native English writers. Learn what the research found, why it happens, how to protect your work and what teachers and editors should do.
 - [ChatGPT Text Detector for Students (Free): What to Know Before You Use One](https://nofakey-ai.github.io/blog/chatgpt-text-detector-for-students-free.html): Using a free ChatGPT text detector as a student? Learn what scores mean, why honest writers get flagged, how to protect your work, and what to do if you are accused.
 - [How to Spot AI-Generated Images: Visual Clues That Still Help](https://nofakey-ai.github.io/blog/how-to-spot-ai-generated-images.html): How to spot AI-generated images by eye: visual clues by area and image type, which tells have faded, why real photos can look fake, and a simple checklist.
 - [AI-Generated Profile Picture Checker: How to Spot a Fake Profile](https://nofakey-ai.github.io/blog/ai-generated-profile-picture-checker.html): Looking for an AI-generated profile picture checker? See the face clues to look for, simple checks that expose fake accounts, and why no checker is the final word.
