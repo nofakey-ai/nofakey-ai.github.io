@@ -21,6 +21,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://nofakey-ai.github.io/blog/ai-detector-accuracy-comparison.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://nofakey-ai.github.io/blog/ai-detector-non-native-english-writers-false-positive.html</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>

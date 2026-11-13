@@ -5,7 +5,14 @@
     <link>https://nofakey-ai.github.io/blog.html</link>
     <description>Guides on spotting fake news, scams, and misinformation before you share them.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Nov 2026 11:09:26 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 08:49:57 +0000</lastBuildDate>
+    <item>
+      <title>AI Detector Accuracy Comparison: How to Compare Detectors Fairly</title>
+      <link>https://nofakey-ai.github.io/blog/ai-detector-accuracy-comparison.html</link>
+      <guid>https://nofakey-ai.github.io/blog/ai-detector-accuracy-comparison.html</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Compare AI detector accuracy fairly: why vendor and independent numbers disagree, why false positives matter most, and a free calculator to test detectors on your own samples.]]></description>
+    </item>
     <item>
       <title>AI Detector False Positives for Non-Native English Writers: What to Do</title>
       <link>https://nofakey-ai.github.io/blog/ai-detector-non-native-english-writers-false-positive.html</link>
