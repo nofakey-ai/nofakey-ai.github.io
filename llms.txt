@@ -12,6 +12,7 @@
 - [Contact](https://nofakey-ai.github.io/contact.html): Get in touch
 
 ## Blog posts
+- [AI Text Detector for SEO Content: What It’s Good For and What It Isn’t](https://nofakey-ai.github.io/blog/ai-text-detector-for-seo-content.html): Should SEO teams use an AI text detector? Learn why scores don’t predict rankings, where detectors help with editing, and a pre-publish checklist that matters more.
 - [AI Detector Accuracy Comparison: How to Compare Detectors Fairly](https://nofakey-ai.github.io/blog/ai-detector-accuracy-comparison.html): Compare AI detector accuracy fairly: why vendor and independent numbers disagree, why false positives matter most, and a free calculator to test detectors on your own samples.
 - [AI Detector False Positives for Non-Native English Writers: What to Do](https://nofakey-ai.github.io/blog/ai-detector-non-native-english-writers-false-positive.html): AI detectors can wrongly flag non-native English writers. Learn what the research found, why it happens, how to protect your work and what teachers and editors should do.
 - [AI Writing Detector for Freelancers and Clients: A Fair Way to Handle AI Use](https://nofakey-ai.github.io/blog/ai-writing-detector-for-freelancers-and-clients.html): How freelancers and clients can handle AI writing detectors fairly: agree AI-use rules, what to check instead of scores, sample contract wording, and what to do in a dispute.
