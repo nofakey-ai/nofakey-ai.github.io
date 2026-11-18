@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KJZ2J9TS');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keyword Rank Checker: How to Check Your Google Rankings Accurately (Plus a Free Rank Log) | Nofakey.ai</title>
+  <meta name="description" content="How to check keyword rankings accurately: why numbers differ, Search Console vs rank trackers, a simple routine, and a free in-browser rank log that stays on your device."/>
+  <link rel="canonical" href="https://nofakey-ai.github.io/blog/keyword-rank-checker.html"/>
+  <meta name="robots" content="index, follow, max-image-preview:large"/>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml"/>
+  <link rel="alternate" type="application/rss+xml" title="Nofakey.ai Blog" href="../rss.xml"/>
+
+  <meta property="og:type" content="article"/>
+  <meta property="og:site_name" content="Nofakey.ai"/>
+  <meta property="og:title" content="Keyword Rank Checker: How to Check Your Google Rankings Accurately (Plus a Free Rank Log)"/>
+  <meta property="og:description" content="How to check keyword rankings accurately: why numbers differ, Search Console vs rank trackers, a simple routine, and a free in-browser rank log that stays on your device."/>
+  <meta property="og:url" content="https://nofakey-ai.github.io/blog/keyword-rank-checker.html"/>
+  <meta property="og:image" content="https://nofakey-ai.github.io/images/keyword-rank-checker.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="675"/>
+  <meta property="article:section" content="Guide"/>
+  <meta property="article:published_time" content="2026-11-16"/>
+  <meta name="thumb-theme" content="t3"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Keyword Rank Checker: How to Check Your Google Rankings Accurately (Plus a Free Rank Log)"/>
+  <meta name="twitter:description" content="How to check keyword rankings accurately: why numbers differ, Search Console vs rank trackers, a simple routine, and a free in-browser rank log that stays on your device."/>
+  <meta name="twitter:image" content="https://nofakey-ai.github.io/images/keyword-rank-checker.jpg"/>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Keyword Rank Checker: How to Check Your Google Rankings Accurately (Plus a Free Rank Log)","description":"How to check keyword rankings accurately: why numbers differ, Search Console vs rank trackers, a simple routine, and a free in-browser rank log that stays on your device.","author":{"@type":"Organization","name":"Nofakey.ai"},"publisher":{"@type":"Organization","name":"Nofakey.ai","logo":{"@type":"ImageObject","url":"https://nofakey-ai.github.io/favicon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://nofakey-ai.github.io/blog/keyword-rank-checker.html"},"image":"https://nofakey-ai.github.io/images/keyword-rank-checker.jpg","inLanguage":"en","datePublished":"2026-11-16","dateModified":"2026-11-16"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nofakey-ai.github.io/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://nofakey-ai.github.io/blog.html"},{"@type":"ListItem","position":3,"name":"Keyword Rank Checker","item":"https://nofakey-ai.github.io/blog/keyword-rank-checker.html"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"What is the most accurate way to check my keyword rankings?","acceptedAnswer":{"@type":"Answer","text":"There is no single exact rank, because results vary by location, device, language and personalisation. For your own site, Google Search Console gives real data as an average position. A rank tracker gives a snapshot for one chosen location and device. Use both, and compare like with like."}},
+  {"@type":"Question","name":"Why does Search Console show a different position from my rank tracker?","acceptedAnswer":{"@type":"Answer","text":"Search Console averages position across all locations, devices and query variations where your page appeared, while a rank tracker reports one specific context. They measure different things, so both can be correct."}},
+  {"@type":"Question","name":"Can I just search Google myself to check my rank?","acceptedAnswer":{"@type":"Answer","text":"You can, but results are personalised by location, language, device and history, and a private window does not fully remove this. Treat a manual check as a rough spot-check."}},
+  {"@type":"Question","name":"How often should I check keyword rankings?","acceptedAnswer":{"@type":"Answer","text":"Rankings move daily, so look at trends over weeks rather than reacting to single days. A weekly log is enough for most sites."}},
+  {"@type":"Question","name":"Does this page check my live Google rankings?","acceptedAnswer":{"@type":"Answer","text":"No. The rank log on this page is a manual tracker. You enter positions you found elsewhere, and it stores them in your browser, shows changes and exports a CSV. It does not query Google."}}]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.31.0/dist/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="../shared.css"/>
+
+  <style>
+    .read-progress{position:fixed;top:0;left:0;height:3px;width:0;background:#e0492f;z-index:9999}
+    .post-hero{margin:0 0 28px;text-align:center}
+    .post-hero img{display:block;width:100%;max-width:760px;height:auto;margin:0 auto;border-radius:14px}
+    .post-hero figcaption{font-size:.85rem;opacity:.75;margin:8px auto 0;max-width:620px}
+    .post-toc{border:1px solid rgba(128,128,128,.3);border-radius:12px;padding:16px 20px;margin:24px 0}
+    .post-toc summary{cursor:pointer;font-weight:600}
+    .post-toc ol{margin:12px 0 0;padding-left:20px;line-height:1.8}
+    .post-toc a{text-decoration:none}
+    .post-toc a:hover{text-decoration:underline}
+    .post-body h2{scroll-margin-top:90px}
+    .post-body ol.steps{padding-left:22px;line-height:1.75}
+    .post-body ol.steps li{margin-bottom:12px}
+    .post-body details.faq{border-bottom:1px solid rgba(128,128,128,.25);padding:12px 0}
+    .post-body details.faq summary{cursor:pointer;font-weight:600;font-size:1.02rem}
+    .post-body details.faq p{margin:10px 0 0}
+    .post-body .cmp{overflow-x:auto;margin:18px 0}
+    .post-body .cmp table{width:100%;border-collapse:collapse;min-width:520px}
+    .post-body .cmp th,.post-body .cmp td{border:1px solid rgba(128,128,128,.3);padding:10px 12px;text-align:left;vertical-align:top;font-size:.95rem}
+    .post-body .cmp th{background:rgba(128,128,128,.12)}
+    .tool{border:1px solid rgba(128,128,128,.3);border-radius:12px;padding:16px 20px;margin:20px 0}
+    .tool label{display:block;font-weight:600;margin:0 0 6px}
+    .tool .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:12px}
+    .tool input[type=text],.tool input[type=number],.tool input[type=date],.tool select{width:100%;padding:9px;border-radius:8px;border:1px solid rgba(128,128,128,.5);font:inherit;background:transparent;color:inherit;box-sizing:border-box}
+    .tool select option{color:#111}
+    .tool .check{display:flex;align-items:center;gap:8px;margin:0 0 12px}
+    .tool .check input{width:auto}
+    .tool .check label{margin:0;font-weight:500}
+    .tool .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+    .tool button{padding:10px 16px;border-radius:8px;font:inherit;font-weight:600;cursor:pointer;border:1px solid rgba(128,128,128,.5);background:transparent;color:inherit}
+    .tool button.go{border:0;background:#e0492f;color:#fff}
+    .tool .hint{font-size:.85rem;opacity:.75;margin:10px 0 0}
+    .tool-msg{margin-top:12px;padding:10px 12px;border-radius:10px;background:rgba(128,128,128,.12);line-height:1.5}
+    .tool-msg.warn{background:rgba(224,73,47,.15)}
+    .tool-msg:empty{display:none}
+    .log-wrap{overflow-x:auto;margin:14px 0 0}
+    .log-wrap table{width:100%;border-collapse:collapse;min-width:560px}
+    .log-wrap th,.log-wrap td{border:1px solid rgba(128,128,128,.3);padding:8px 10px;text-align:left;vertical-align:middle;font-size:.93rem}
+    .log-wrap th{background:rgba(128,128,128,.12)}
+    .log-wrap .ctx{display:block;font-size:.8rem;opacity:.7}
+    .log-wrap button.del{padding:4px 10px;font-size:.82rem}
+    .spark{display:block;width:96px;height:28px}
+    .back-top{position:fixed;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;background:#e0492f;color:#fff;font-size:1.2rem;display:none;z-index:900}
+    .back-top.show{display:block}
+    a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+    @media (max-width:600px){.post-toc,.tool{padding:14px}.post-body .cmp th,.post-body .cmp td{padding:8px}}
+  </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJZ2J9TS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="read-progress" id="readProgress" aria-hidden="true"></div>
+
+<nav aria-label="Main">
+  <a href="../index.html" class="logo">
+    <div class="logo-icon"><i class="ti ti-shield-check"></i></div>
+    <span class="logo-text">Nofakey<span>.ai</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html#how">How it works</a></li>
+    <li><a href="../blog.html" aria-current="page">Blog</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <a href="../index.html#checker" class="nav-cta">Check now — free</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <i class="ti ti-menu-2"></i>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="../index.html#how">How it works</a>
+  <a href="../blog.html">Blog</a>
+  <a href="../about.html">About</a>
+  <a href="../contact.html">Contact</a>
+</div>
+
+<main>
+<header class="post-header">
+  <div class="blog-tag">Guide</div>
+  <h1>Keyword Rank Checker: How to Check Your Google Rankings Accurately (Plus a Free Rank Log)</h1>
+  <div class="post-meta">
+    <span><i class="ti ti-calendar"></i> <time datetime="2026-11-16">16 November 2026</time></span>
+    <span><i class="ti ti-clock"></i> 9 min read</span>
+    <span><i class="ti ti-chart-line"></i> SEO basics</span>
+  </div>
+</header>
+
+<article class="post-body">
+  <figure class="post-hero">
+    <picture>
+      <source srcset="../images/keyword-rank-checker.webp" type="image/webp"/>
+      <img src="../images/keyword-rank-checker.jpg" width="1200" height="675" alt="A sample rank log with four made-up keywords showing current position, change and a small trend line, beside four tips: use Search Console for trends, fix one device and location, log on a regular schedule, and judge by clicks not rank alone" fetchpriority="high"/>
+    </picture>
+    <figcaption>Illustration only. The keywords and numbers shown are made up.</figcaption>
+  </figure>
+
+  <p>"Where do I rank for this keyword?" sounds like a simple question with a single answer. It is not. The position you see depends on where you are, what device you use and what you searched before, and the numbers from different tools rarely match. This guide explains why, shows how to check rankings accurately, and includes a free rank log you can use right on this page to keep track of changes over time.</p>
+
+  <div class="post-quickanswer">
+    <span class="qa-label"><i class="ti ti-bolt"></i> Quick answer</span>
+    There is <strong>no single exact rank</strong>. Use Google Search Console for real data on your own site, which reports an average position, and a rank tracker or careful manual check for a snapshot in <strong>one chosen location and device</strong>. Compare like with like, look at trends over weeks, and judge success by clicks and conversions, not position alone.
+  </div>
+
+  <div class="post-toc" role="navigation" aria-label="Table of contents">
+    <details open><summary>In this guide</summary><ol id="tocList"></ol></details>
+  </div>
+
+  <h2 id="why">Why your rank depends on who is asking</h2>
+  <ul>
+    <li><strong>Location.</strong> The same search can show different results in different countries, cities and even neighbourhoods, especially for local intent.</li>
+    <li><strong>Device.</strong> Mobile and desktop results differ.</li>
+    <li><strong>Personalisation.</strong> Language settings, search history and signed-in status can change what you see. A private window helps but does not remove all of this.</li>
+    <li><strong>Search features.</strong> Maps, videos, answer boxes and ads push organic results down, so "position 3" can look very different on the screen.</li>
+    <li><strong>Constant change.</strong> Results move day to day, and sometimes within a day.</li>
+  </ul>
+  <p>So when two tools report different positions, that is normal. They are measuring different contexts.</p>
+
+  <h2 id="methods">Three ways to check, and what each really tells you</h2>
+  <div class="cmp"><table>
+    <thead><tr><th>Method</th><th>What it gives you</th><th>Main limits</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Google Search Console</strong> (free, your own site only)</td><td>Real data from Google: clicks, impressions, click-through rate and <em>average position</em> by query and page</td><td>It is an average across locations, devices and query variations, not a live rank. Data arrives with a delay of a couple of days, and you only see queries that already brought impressions</td></tr>
+      <tr><td><strong>A rank tracker</strong> (free or paid)</td><td>A snapshot for a keyword in a chosen location and device, often on a schedule, with history and competitors</td><td>One context only, results can vary between tools, and paid plans limit keywords and checks</td></tr>
+      <tr><td><strong>A manual check</strong></td><td>A rough idea of what a searcher in your situation might see</td><td>Personalised and location-dependent, so unreliable for precise tracking</td></tr>
+    </tbody>
+  </table></div>
+  <p>A useful way to think about it: Search Console tells you what really happened across your audience, a rank tracker tells you what one searcher in one place would see, and a manual check is a quick sanity test.</p>
+
+  <h2 id="gsc">Using Search Console for rank data</h2>
+  <ol class="steps">
+    <li><strong>Open the Search results performance report</strong> for your site in Search Console.</li>
+    <li><strong>Turn on the average position metric,</strong> and open the Queries tab to see positions by keyword.</li>
+    <li><strong>Filter by page, country and device</strong> when a number looks odd. A position that looks middling overall may be strong in one country and weak in another.</li>
+    <li><strong>Compare date ranges,</strong> for example the last four weeks against the four before, rather than looking at single days.</li>
+    <li><strong>Look at clicks and impressions with the position.</strong> A position that rises while clicks fall tells a different story from one where both improve.</li>
+    <li><strong>Export the data</strong> if you want to keep a longer history, since Search Console currently keeps about 16 months.</li>
+  </ol>
+  <p>Remember that average position is a blend. A page that appears at position 2 for some searches and 20 for others may show an average that matches neither.</p>
+
+  <h2 id="routine">A simple routine for accurate rank checks</h2>
+  <ol class="steps">
+    <li><strong>Choose a short list of keywords that matter,</strong> with the page you want to rank for each. Tracking everything just adds noise.</li>
+    <li><strong>Fix the context.</strong> Pick the country or city, the device and the language you care about, and use them every time.</li>
+    <li><strong>Check on a schedule,</strong> such as weekly, at a similar time.</li>
+    <li><strong>Record the position, the date and the context.</strong> You can use the rank log below, a spreadsheet or a tracker.</li>
+    <li><strong>Note changes in the page or the search results,</strong> such as an update to your content or a new feature on the results page.</li>
+    <li><strong>Review trends monthly,</strong> and act on sustained movement, not daily wobble.</li>
+    <li><strong>Cross-check with Search Console and analytics</strong> to see whether rankings are bringing visitors.</li>
+  </ol>
+
+  <h2 id="log">Free rank log (manual tracker)</h2>
+  <p><strong>What it does:</strong> you enter positions you found elsewhere, such as a rank tracker, a careful manual check or a Search Console query, and the log stores them in <em>your browser</em>, shows the latest position, the change since the previous check and a small trend line, and lets you export a CSV. <strong>What it does not do:</strong> it does not look up live Google rankings, and nothing you enter is sent to any server. If you clear your browser data, the log is cleared too, so export a copy if you want to keep it.</p>
+  <form class="tool" id="logForm" novalidate>
+    <div class="grid">
+      <div>
+        <label for="kw">Keyword</label>
+        <input type="text" id="kw" autocomplete="off" placeholder="e.g. how to check if a photo is ai generated"/>
+      </div>
+      <div>
+        <label for="pg">Page URL or name (optional)</label>
+        <input type="text" id="pg" autocomplete="off" placeholder="e.g. /blog/photo-check"/>
+      </div>
+      <div>
+        <label for="pos">Position (1 to 100)</label>
+        <input type="number" id="pos" inputmode="numeric" min="1" max="100" step="1"/>
+      </div>
+      <div>
+        <label for="dt">Date</label>
+        <input type="date" id="dt"/>
+      </div>
+      <div>
+        <label for="dev">Device</label>
+        <select id="dev"><option value="desktop">Desktop</option><option value="mobile">Mobile</option><option value="unspecified">Not specified</option></select>
+      </div>
+      <div>
+        <label for="loc">Location (optional)</label>
+        <input type="text" id="loc" autocomplete="off" placeholder="e.g. India, or New Delhi"/>
+      </div>
+    </div>
+    <div class="check">
+      <input type="checkbox" id="nf"/>
+      <label for="nf">Not found in the top 100</label>
+    </div>
+    <div class="btn-row">
+      <button class="go" type="submit">Add check</button>
+      <button type="button" id="exportBtn">Export CSV</button>
+      <button type="button" id="clearBtn">Clear all</button>
+    </div>
+    <p class="hint">Tip: keep the same device and location for a keyword so changes are comparable. Checks with different device or location are tracked separately.</p>
+    <div class="tool-msg" id="logMsg" role="status" aria-live="polite"></div>
+    <div id="summaryOut"></div>
+    <div id="historyOut"></div>
+  </form>
+
+  <h2 id="read">How to read your results</h2>
+  <ul>
+    <li><strong>Lower numbers are better.</strong> Position 1 is the top organic result. An up arrow means the number fell, which is an improvement.</li>
+    <li><strong>Ignore small wobbles.</strong> Moves of a place or two from week to week are usually normal.</li>
+    <li><strong>Look for direction over several checks,</strong> not a single change.</li>
+    <li><strong>Pair with real traffic.</strong> Rankings only matter if they bring clicks that help your goals.</li>
+  </ul>
+
+  <h2 id="mistakes">Common mistakes</h2>
+  <ul>
+    <li><strong>Checking while signed in, on one device, in one city,</strong> then treating the result as universal.</li>
+    <li><strong>Comparing numbers from different tools</strong> as if they measured the same thing.</li>
+    <li><strong>Reacting to daily movement.</strong> Results fluctuate.</li>
+    <li><strong>Tracking too many keywords,</strong> including ones that do not map to a page or a goal.</li>
+    <li><strong>Ignoring intent.</strong> A ranking for a keyword that does not match what you offer will not help.</li>
+    <li><strong>Chasing rank instead of value.</strong> Clicks, leads and sales are the point.</li>
+    <li><strong>Scraping Google yourself.</strong> Automated queries can break the search engine's terms and get blocked, so use Search Console or a reputable service instead.</li>
+  </ul>
+
+  <h2 id="after">What to do when rankings change</h2>
+  <ul>
+    <li><strong>Check whether the change is sustained,</strong> and whether it is limited to one device or country.</li>
+    <li><strong>Review the page.</strong> Is it still accurate, useful and clearly better than the pages above it?</li>
+    <li><strong>Look at the results page.</strong> New features or new competitors can change the picture.</li>
+    <li><strong>Avoid knee-jerk rewrites.</strong> Change one thing at a time and note it in your log.</li>
+    <li><strong>Focus on helpfulness and originality.</strong> See <a href="../blog/does-google-penalize-ai-generated-content.html">does Google penalize AI-generated content?</a></li>
+  </ul>
+
+  <h2 id="related">Related reading for SEO and content teams</h2>
+  <p>Rankings are one measure of content quality, not the only one. Before publishing, use a quality checklist, as described in <a href="../blog/ai-text-detector-for-seo-content.html">AI text detectors for SEO content</a>. For auditing a whole site, see <a href="../blog/ai-content-audit-for-seo-agencies.html">AI content audit for SEO agencies</a>. If a traffic drop worries you, see <a href="../blog/is-my-content-flagged-as-ai-generated.html">is my content flagged as AI-generated?</a> For agencies managing many clients, see <a href="../blog/bulk-ai-content-checker-for-agencies.html">bulk AI content checker for agencies</a>. Be careful with unsolicited emails or messages offering "guaranteed rankings," as many are scams. If one looks suspicious, paste it into our <a href="../index.html#checker">free checker</a> for a quick first read.</p>
+
+  <h2 id="conclusion">Conclusion</h2>
+  <p>A keyword rank checker gives you a number, but not a single truth. Use Search Console for real averages on your own site, a tracker or a careful manual check for a snapshot in one context, keep the context fixed, and focus on trends and on clicks. Log your checks, review them regularly and act on sustained changes. Find more guides on the <a href="../blog.html">Nofakey.ai blog</a>.</p>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <details class="faq"><summary>What is the most accurate way to check my keyword rankings?</summary><p>There is no single exact rank, because results vary by location, device, language and personalisation. For your own site, Google Search Console gives real data as an average position. A rank tracker gives a snapshot for one chosen location and device. Use both, and compare like with like.</p></details>
+  <details class="faq"><summary>Why does Search Console show a different position from my rank tracker?</summary><p>Search Console averages position across all locations, devices and query variations where your page appeared, while a rank tracker reports one specific context. They measure different things, so both can be correct.</p></details>
+  <details class="faq"><summary>Can I just search Google myself to check my rank?</summary><p>You can, but results are personalised by location, language, device and history, and a private window does not fully remove this. Treat a manual check as a rough spot-check.</p></details>
+  <details class="faq"><summary>How often should I check keyword rankings?</summary><p>Rankings move daily, so look at trends over weeks rather than reacting to single days. A weekly log is enough for most sites.</p></details>
+  <details class="faq"><summary>Does this page check my live Google rankings?</summary><p>No. The rank log on this page is a manual tracker. You enter positions you found elsewhere, and it stores them in your browser, shows changes and exports a CSV. It does not query Google.</p></details>
+
+  <div class="post-cta">
+    <p>Got a suspicious link or message to check?</p>
+    <a class="btn" href="../index.html#checker"><i class="ti ti-search"></i> Run it through the checker</a>
+  </div>
+</article>
+</main>
+
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="ti ti-arrow-up"></i></button>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><div class="logo-icon"><i class="ti ti-shield-check"></i></div><span class="logo-text">Nofakey<span>.ai</span></span></div>
+      <p>A quick first-pass check for fake news and scams.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="../index.html#checker">Check now</a></li>
+        <li><a href="../index.html#how">How it works</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../sitemap.html">Sitemap</a></li>
+        <li><a href="../rss.xml">RSS Feed</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../privacy.html">Privacy policy</a></li>
+        <li><a href="../terms.html">Terms of use</a></li>
+        <li><a href="../cookies.html">Cookie policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Contact</h4>
+      <ul><li><a href="mailto:nofakey.ai@outlook.com">nofakey.ai@outlook.com</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Nofakey.ai — All rights reserved</p>
+    <div class="social-links">
+      <a href="https://x.com/nofakey_ai" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="ti ti-brand-x"></i></a>
+      <a href="https://www.instagram.com/nofakey.ai/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61592580771401" target="_blank" rel="noopener" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+      <a href="https://www.linkedin.com/company/nofakey-ai/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+      <a href="https://www.threads.com/@nofakey.ai" target="_blank" rel="noopener" aria-label="Threads"><i class="ti ti-brand-threads"></i></a>
+      <a href="https://bsky.app/profile/nofakeyai.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="ti ti-brand-bluesky"></i></a>
+      <a href="https://mastodon.social/@nofakeyai" target="_blank" rel="noopener" aria-label="Mastodon"><i class="ti ti-brand-mastodon"></i></a>
+      <a href="https://in.pinterest.com/nofakeyai/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="ti ti-brand-pinterest"></i></a>
+      <a href="https://www.tumblr.com/blog/nofakeyai" target="_blank" rel="noopener" aria-label="Tumblr"><i class="ti ti-brand-tumblr"></i></a>
+      <a href="https://github.com/nofakey-ai" target="_blank" rel="noopener" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+      <a href="https://www.youtube.com/@nofakeyai" target="_blank" rel="noopener" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared.js"></script>
+<script>
+(function () {
+  // Table of contents
+  var list = document.getElementById('tocList');
+  document.querySelectorAll('.post-body h2[id]').forEach(function (h) {
+    var li = document.createElement('li'), a = document.createElement('a');
+    a.href = '#' + h.id; a.textContent = h.textContent; li.appendChild(a); list.appendChild(li);
+  });
+
+  // Reading progress and back-to-top
+  var bar = document.getElementById('readProgress'), top = document.getElementById('backTop');
+  function onScroll() {
+    var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    top.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  top.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+  onScroll();
+
+  // Manual rank log. Data stays in this browser (localStorage); nothing is sent anywhere.
+  var KEY = 'nofakey_rank_log_v1', MAX = 2000;
+  var entries = [];
+  var memoryOnly = false;
+  var form = document.getElementById('logForm');
+  var msg = document.getElementById('logMsg');
+  var summaryOut = document.getElementById('summaryOut');
+  var historyOut = document.getElementById('historyOut');
+  var dt = document.getElementById('dt');
+
+  function today() {
+    var d = new Date();
+    var m = String(d.getMonth() + 1).padStart(2, '0'), day = String(d.getDate()).padStart(2, '0');
+    return d.getFullYear() + '-' + m + '-' + day;
+  }
+  dt.value = today();
+
+  function load() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (raw) { var arr = JSON.parse(raw); if (Array.isArray(arr)) entries = arr; }
+    } catch (e) { memoryOnly = true; }
+  }
+  function save() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(entries)); }
+    catch (e) { memoryOnly = true; }
+  }
+  function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+  function el(tag, text, cls) {
+    var e = document.createElement(tag);
+    if (text !== undefined) e.textContent = text;
+    if (cls) e.className = cls;
+    return e;
+  }
+  function say(text, warn) {
+    msg.textContent = text;
+    msg.className = 'tool-msg' + (warn ? ' warn' : '');
+  }
+  function ctxLabel(e) {
+    var parts = [];
+    if (e.device && e.device !== 'unspecified') parts.push(e.device);
+    if (e.loc) parts.push(e.loc);
+    return parts.join(', ');
+  }
+  function groupKey(e) { return [e.kw.toLowerCase(), e.device || '', (e.loc || '').toLowerCase()].join('|'); }
+  function posText(p) { return p === null ? 'Not in top 100' : String(p); }
+
+  function sparkline(values) {
+    var w = 96, h = 28, pad = 3, ns = 'http://www.w3.org/2000/svg';
+    var svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('class', 'spark');
+    svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', 'Position history, oldest to newest: ' + values.map(function (v) { return v === null ? 'not in top 100' : v; }).join(', '));
+    var nums = values.map(function (v) { return v === null ? 101 : v; });
+    if (nums.length < 2) { var t = document.createElementNS(ns, 'text'); t.setAttribute('x', 2); t.setAttribute('y', 18); t.setAttribute('font-size', '11'); t.setAttribute('fill', 'currentColor'); t.textContent = 'one check'; svg.appendChild(t); return svg; }
+    var mn = Math.min.apply(null, nums), mx = Math.max.apply(null, nums), rng = Math.max(1, mx - mn);
+    var pts = nums.map(function (v, i) {
+      var x = pad + (i * (w - 2 * pad)) / (nums.length - 1);
+      var y = pad + ((v - mn) / rng) * (h - 2 * pad); // lower position number = higher on the chart
+      return x.toFixed(1) + ',' + y.toFixed(1);
+    });
+    var pl = document.createElementNS(ns, 'polyline');
+    pl.setAttribute('points', pts.join(' '));
+    pl.setAttribute('fill', 'none'); pl.setAttribute('stroke', '#e0492f'); pl.setAttribute('stroke-width', '2');
+    svg.appendChild(pl);
+    return svg;
+  }
+
+  function render() {
+    clear(summaryOut); clear(historyOut);
+    if (!entries.length) {
+      summaryOut.appendChild(el('p', 'No checks yet. Add your first one above.', 'hint'));
+      return;
+    }
+    // sort chronologically (date, then insertion id)
+    var sorted = entries.slice().sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a.id - b.id; });
+    var groups = {}, order = [];
+    sorted.forEach(function (e) {
+      var k = groupKey(e);
+      if (!groups[k]) { groups[k] = []; order.push(k); }
+      groups[k].push(e);
+    });
+
+    var wrap = el('div', undefined, 'log-wrap');
+    var table = document.createElement('table');
+    var thead = document.createElement('thead'), hr = document.createElement('tr');
+    ['Keyword', 'Latest', 'Change since previous', 'Best', 'Checks', 'Trend'].forEach(function (t) { var th = el('th', t); th.scope = 'col'; hr.appendChild(th); });
+    thead.appendChild(hr); table.appendChild(thead);
+    var tbody = document.createElement('tbody');
+    order.forEach(function (k) {
+      var g = groups[k], last = g[g.length - 1], prev = g.length > 1 ? g[g.length - 2] : null;
+      var tr = document.createElement('tr');
+      var th = document.createElement('th'); th.scope = 'row';
+      th.appendChild(document.createTextNode(last.kw));
+      var c = ctxLabel(last); if (c) th.appendChild(el('span', c, 'ctx'));
+      tr.appendChild(th);
+      tr.appendChild(el('td', posText(last.pos)));
+      var change = 'First check';
+      if (prev) {
+        if (last.pos === null && prev.pos === null) change = 'No change (not in top 100)';
+        else if (last.pos === null) change = 'Dropped out of top 100';
+        else if (prev.pos === null) change = 'Entered top 100';
+        else if (last.pos < prev.pos) change = '▲ Improved by ' + (prev.pos - last.pos);
+        else if (last.pos > prev.pos) change = '▼ Fell by ' + (last.pos - prev.pos);
+        else change = 'No change';
+      }
+      tr.appendChild(el('td', change));
+      var ranked = g.filter(function (x) { return x.pos !== null; }).map(function (x) { return x.pos; });
+      tr.appendChild(el('td', ranked.length ? String(Math.min.apply(null, ranked)) : '–'));
+      tr.appendChild(el('td', String(g.length)));
+      var tdSpark = document.createElement('td'); tdSpark.appendChild(sparkline(g.map(function (x) { return x.pos; }))); tr.appendChild(tdSpark);
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody); wrap.appendChild(table);
+    summaryOut.appendChild(el('h3', 'Summary'));
+    summaryOut.appendChild(wrap);
+
+    // history (newest first)
+    historyOut.appendChild(el('h3', 'History'));
+    var hw = el('div', undefined, 'log-wrap');
+    var ht = document.createElement('table');
+    var hh = document.createElement('thead'), hhr = document.createElement('tr');
+    ['Date', 'Keyword', 'Context', 'Position', 'Page', ''].forEach(function (t) { var th = el('th', t); th.scope = 'col'; hhr.appendChild(th); });
+    hh.appendChild(hhr); ht.appendChild(hh);
+    var hb = document.createElement('tbody');
+    sorted.slice().reverse().forEach(function (e) {
+      var tr = document.createElement('tr');
+      tr.appendChild(el('td', e.date));
+      tr.appendChild(el('td', e.kw));
+      tr.appendChild(el('td', ctxLabel(e) || '–'));
+      tr.appendChild(el('td', posText(e.pos)));
+      tr.appendChild(el('td', e.page || '–'));
+      var td = document.createElement('td');
+      var b = el('button', 'Delete'); b.type = 'button'; b.className = 'del';
+      b.setAttribute('aria-label', 'Delete check for ' + e.kw + ' on ' + e.date);
+      b.addEventListener('click', function () {
+        entries = entries.filter(function (x) { return x.id !== e.id; });
+        save(); render(); say('Check deleted.');
+      });
+      td.appendChild(b); tr.appendChild(td);
+      hb.appendChild(tr);
+    });
+    ht.appendChild(hb); hw.appendChild(ht); historyOut.appendChild(hw);
+  }
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var kw = document.getElementById('kw').value.trim();
+    var page = document.getElementById('pg').value.trim();
+    var posRaw = document.getElementById('pos').value.trim();
+    var nf = document.getElementById('nf').checked;
+    var date = dt.value;
+    var dev = document.getElementById('dev').value;
+    var loc = document.getElementById('loc').value.trim();
+    if (!kw) { say('Enter a keyword.', true); return; }
+    if (kw.length > 200 || page.length > 300 || loc.length > 120) { say('One of the text fields is too long.', true); return; }
+    if (!date) { say('Choose a date.', true); return; }
+    var pos = null;
+    if (!nf) {
+      var n = Number(posRaw);
+      if (posRaw === '' || !isFinite(n) || Math.floor(n) !== n || n < 1 || n > 100) { say('Enter a whole-number position from 1 to 100, or tick “Not found in the top 100”.', true); return; }
+      pos = n;
+    }
+    if (entries.length >= MAX) { say('The log is full (' + MAX + ' checks). Export a CSV and clear old checks.', true); return; }
+    var id = entries.reduce(function (m, e) { return Math.max(m, e.id); }, 0) + 1;
+    entries.push({ id: id, kw: kw, page: page, pos: pos, date: date, device: dev, loc: loc });
+    save();
+    document.getElementById('pos').value = '';
+    document.getElementById('nf').checked = false;
+    render();
+    say(memoryOnly ? 'Added. Your browser blocked saving, so this log will be lost when you leave the page. Export a CSV to keep it.' : 'Check added and saved in this browser.', memoryOnly);
+  });
+
+  function csvCell(v) {
+    var s = (v === null || v === undefined) ? '' : String(v);
+    if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; // avoid spreadsheet formula injection
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+  document.getElementById('exportBtn').addEventListener('click', function () {
+    if (!entries.length) { say('Nothing to export yet.', true); return; }
+    var rows = [['date', 'keyword', 'page', 'device', 'location', 'position']];
+    entries.slice().sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a.id - b.id; }).forEach(function (e) {
+      rows.push([e.date, e.kw, e.page, e.device, e.loc, e.pos === null ? 'not in top 100' : e.pos]);
+    });
+    var csv = rows.map(function (r) { return r.map(csvCell).join(','); }).join('\r\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'rank-log.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+    say('CSV exported.');
+  });
+  document.getElementById('clearBtn').addEventListener('click', function () {
+    if (!entries.length) { say('The log is already empty.'); return; }
+    if (window.confirm('Delete all saved checks from this browser? This cannot be undone.')) {
+      entries = []; save(); render(); say('All checks cleared.');
+    }
+  });
+
+  load();
+  render();
+})();
+</script>
+</body>
+</html>
